@@ -22,3 +22,6 @@ datasets/
 *.tif
 *.tiff
 *.pdf
+# Optional local original-protocol snapshot (never commit runtime artifacts)
+docs/
+manifests/
