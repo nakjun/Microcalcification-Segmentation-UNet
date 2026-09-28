@@ -1,0 +1,144 @@
+{
+  "experiment": "comparative_study_stage1_seed42",
+  "seed": 42,
+  "variants": [
+    {
+      "id": "C",
+      "overlap_loss": "dice",
+      "positive_strategy": "pixel_uniform",
+      "negative_strategy": "current_model_FP",
+      "component_aux": false,
+      "background_aux": false,
+      "component_coefficient": 0.1,
+      "background_coefficient": 0.1
+    },
+    {
+      "id": "L",
+      "overlap_loss": "dice",
+      "positive_strategy": "pixel_uniform",
+      "negative_strategy": "current_model_FP",
+      "component_aux": true,
+      "background_aux": false,
+      "component_coefficient": 0.1,
+      "background_coefficient": 0.1
+    },
+    {
+      "id": "H",
+      "overlap_loss": "dice",
+      "positive_strategy": "pixel_uniform",
+      "negative_strategy": "current_model_FP",
+      "component_aux": false,
+      "background_aux": true,
+      "component_coefficient": 0.1,
+      "background_coefficient": 0.1
+    },
+    {
+      "id": "LH",
+      "overlap_loss": "dice",
+      "positive_strategy": "pixel_uniform",
+      "negative_strategy": "current_model_FP",
+      "component_aux": true,
+      "background_aux": true,
+      "component_coefficient": 0.1,
+      "background_coefficient": 0.1
+    }
+  ],
+  "epochs": 16,
+  "patches_per_epoch": 2048,
+  "batch_size": 16,
+  "primary": "fixed epoch16 gate AND p>=0.9 full-native",
+  "secondary": [
+    "fixed gate AND ((fill AND p>=0.3) OR (~fill AND p>=0.9))",
+    "ungated p>=0.5"
+  ],
+  "loss": "exact frozen v5 BCE20+positive Dice; component/background coeff0.1 each; warmup epoch1-3 zero/4-6 ramp",
+  "mining": "own current model training-only after3/7/11, initial frozen v5C SAM centers",
+  "selection": null,
+  "held_allowed": false,
+  "forbidden": [
+    "threshold/epoch/coefficient sweep",
+    "baseline mutation",
+    "GT-conditioned inference",
+    "claim exact Pro_UNeXt reproduction"
+  ],
+  "runtime": {
+    "torch_deterministic_algorithms": true,
+    "warn_only": false,
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "precision": "BF16 convolution/FP32loss unchanged",
+    "warmup_barrier": "all12jobs train3epochs+ownmining then verify model/optimizer/pool equality per fold before epoch4; included in16epochs"
+  },
+  "backbones": {
+    "proposed": {
+      "name": "Proposed PatchUNet",
+      "normalization": "original GroupNorm8/SiLU",
+      "base_channels": 16,
+      "pretrained": false
+    },
+    "unet2d": {
+      "name": "U-Net 2D from Attention-Gated-Networks CNN baseline",
+      "normalization": "upstream encoder BN; decoder no BN",
+      "feature_scale": 4,
+      "is_deconv": true,
+      "pretrained": false,
+      "in_channels": 2,
+      "num_classes": 1,
+      "batchnorm": true
+    },
+    "utnet": {
+      "name": "UTNet official",
+      "normalization": "upstream BN",
+      "base_chan": 32,
+      "block_list": "1234",
+      "num_blocks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "reduce_size": 8,
+      "projection": "interp",
+      "attn_drop": 0.1,
+      "proj_drop": 0.1,
+      "rel_pos": true,
+      "maxpool": true,
+      "aux_loss": false,
+      "pretrained": false,
+      "heads": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "in_channels": 2,
+      "num_classes": 1
+    }
+  },
+  "reuse": {
+    "unext": "runs/improvement_unext_deterministic/unext_v5_losses_deterministic_seed42/complete.json",
+    "requirements": "fixed4loss/epoch16/seed42/split/nativeinput/optimizer/mining/strict runtime equality; report provenance, not fresh rerun"
+  },
+  "budget_per_new_backbone": {
+    "jobs": 12,
+    "epochs": 192,
+    "patches": 393216,
+    "updates": 24576,
+    "mining_native_images": 2976,
+    "oof_native_images": 496
+  },
+  "budget_new_total": {
+    "jobs": 36,
+    "epochs": 576,
+    "patches": 1179648,
+    "updates": 73728,
+    "mining_native_images": 8928,
+    "oof_native_images": 1488
+  },
+  "stage": "1: single-seed controlled architecture-by-loss comparison, not completed multi-seed or independent-test study",
+  "historical_v5": "reference only; not primary proposed model row",
+  "analysis": {
+    "primary_contrast": "LH minus H per backbone; full4loss factorial also reported",
+    "paired_bootstrap": "2000 subject-cluster resamples seed314159; conditional on fitted seed42 OOF predictions, no multi-seed uncertainty or independent-test claim",
+    "efficiency": "same GPU0 isolated BF16 B16 256 forward:10warmup+50timediterations; params and incremental peak memory; fixed whole-native largest train image for timing, no GT"
+  }
+}

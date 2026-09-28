@@ -1,0 +1,13 @@
+{
+  "upstream_url": "https://github.com/ccchg/yolo-hlsam.git",
+  "upstream_commit": "a29bb8e04796abb3af26d1cdc564183b68e13739",
+  "upstream_path": "external/yolo-hlsam",
+  "decoder_source": "yolo-hlsam/train/train.py",
+  "decoder_source_sha256": "4154eadaea2bf2c4d1e4c5de721dc795196786e64de66e13225e04a2bc61ced1",
+  "local_changes": [
+    "Extract LayerNorm2d, MLP, MaskDecoderHQ only; explicit constructor SAM state replaces hardcoded torch.load",
+    "Local two-stage trainer and image-only inference adapter",
+    "Local BCE+Dice decoder training and non-OTA detector training differ from original recipe"
+  ],
+  "license_status": "No LICENSE file in pinned upstream checkout; existing source headers preserved"
+}

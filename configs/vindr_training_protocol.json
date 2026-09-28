@@ -1,0 +1,44 @@
+{
+  "protocol_version": "v2_seed42_affine",
+  "models": [
+    "yolo",
+    "detr",
+    "unet"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "max_epochs": 30,
+  "early_stopping_patience": 8,
+  "batch_size": 8,
+  "optimizer": "AdamW",
+  "learning_rate": 0.0001,
+  "weight_decay": 0.0001,
+  "scheduler": "cosine_to_0.1_initial_lr",
+  "checkpoint_metric": "validation_AP50_95",
+  "selection_metric": "validation_sensitivity_at_1_FP_per_image_then_AP50",
+  "bbox_policy": "intersection_with_original_image_bounds_all_splits",
+  "prediction_limit_per_image": 100,
+  "detection_score_floor": 0.001,
+  "unet_validation_pixel_thresholds": [
+    0.3,
+    0.5,
+    0.7
+  ],
+  "augmentation": "horizontal_flip_p0.5_scale_0.1_translate_0.03",
+  "intensity": "rescale_then_per_image_nonpadding_percentile_0.5_99.5_MONOCHROME1_inversion_uint8",
+  "geometry": "1024_square_letterbox_no_aspect_distortion",
+  "test_images": 4000,
+  "decimal_places_in_exported_results": 3,
+  "note_ko": "본 파일의 설정값과 내부 checkpoint/선정 계산은 정밀도를 유지하며, 외부 결과 파일과 한글 보고서는 실수를 소수점 셋째 자리까지 반올림한다. 근사 box mask는 실제 석회화 픽셀 GT가 아니다.",
+  "separate_latency_benchmark": false,
+  "training_positive_repeat": 16,
+  "stage_review_required": true,
+  "augmentation_scale": 0.1,
+  "augmentation_translate": 0.03,
+  "current_experiment_seeds": [
+    42
+  ]
+}

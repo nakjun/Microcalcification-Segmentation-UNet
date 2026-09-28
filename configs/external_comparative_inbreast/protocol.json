@@ -1,0 +1,15 @@
+{
+  "version": "external_comparative_inbreast_seed42_v1",
+  "dataset": "INbreast all 410 DICOM images",
+  "models": "PatchUNet, UNeXt, U-Net 2D, and UTNet; C/L/H/LH; each epoch16 fold checkpoint separately",
+  "training": false,
+  "selection": "none",
+  "ensemble": false,
+  "inference": "all images receive image-only full-native refinement with 256-pixel tiles, stride 192, overlap probability averaging, and sparse p>=0.3 storage",
+  "primary_policy": "fixed external_v3 gate AND p>=0.9",
+  "secondary_policy": "ungated p>=0.5",
+  "gate": "external_v3 frozen gate checkpoint and fixed primary threshold; gate never suppresses refinement execution",
+  "annotation_policy": "Open INbreast XML only after all 48 checkpoint-by-410 prediction cohorts have complete markers. Use the external_v3 point/contour parsing rule unchanged. Missing XML is unknown, not negative; contour Dice/IoU are partial-annotation agreement.",
+  "reporting": "Preserve per-fold metrics and condition-level fold mean/min/max; do not combine with CSAW metrics or select a model.",
+  "disk_reserve_gib": 8
+}

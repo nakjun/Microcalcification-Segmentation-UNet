@@ -1,0 +1,81 @@
+{
+  "experiment": "unext_v5_losses_deterministic_seed42",
+  "model": "UNeXt_author_2ch",
+  "seed": 42,
+  "variants": [
+    {
+      "id": "C",
+      "overlap_loss": "dice",
+      "positive_strategy": "pixel_uniform",
+      "negative_strategy": "current_model_FP",
+      "component_aux": false,
+      "background_aux": false,
+      "component_coefficient": 0.1,
+      "background_coefficient": 0.1
+    },
+    {
+      "id": "L",
+      "overlap_loss": "dice",
+      "positive_strategy": "pixel_uniform",
+      "negative_strategy": "current_model_FP",
+      "component_aux": true,
+      "background_aux": false,
+      "component_coefficient": 0.1,
+      "background_coefficient": 0.1
+    },
+    {
+      "id": "H",
+      "overlap_loss": "dice",
+      "positive_strategy": "pixel_uniform",
+      "negative_strategy": "current_model_FP",
+      "component_aux": false,
+      "background_aux": true,
+      "component_coefficient": 0.1,
+      "background_coefficient": 0.1
+    },
+    {
+      "id": "LH",
+      "overlap_loss": "dice",
+      "positive_strategy": "pixel_uniform",
+      "negative_strategy": "current_model_FP",
+      "component_aux": true,
+      "background_aux": true,
+      "component_coefficient": 0.1,
+      "background_coefficient": 0.1
+    }
+  ],
+  "epochs": 16,
+  "patches_per_epoch": 2048,
+  "batch_size": 16,
+  "primary": "fixed epoch16 gate AND p>=0.9 full-native",
+  "secondary": [
+    "fixed gate AND ((fill AND p>=0.3) OR (~fill AND p>=0.9))",
+    "ungated p>=0.5"
+  ],
+  "loss": "exact frozen v5 BCE20+positive Dice; component/background coeff0.1 each; warmup epoch1-3 zero/4-6 ramp",
+  "mining": "own current model training-only after3/7/11, initial frozen v5C SAM centers",
+  "budget": {
+    "jobs": 12,
+    "epochs": 192,
+    "patches": 393216,
+    "updates": 24576,
+    "mining_native_images": 2976,
+    "oof_native_images": 496
+  },
+  "selection": null,
+  "held_allowed": false,
+  "forbidden": [
+    "threshold/epoch/coefficient sweep",
+    "baseline mutation",
+    "GT-conditioned inference",
+    "claim exact Pro_UNeXt reproduction"
+  ],
+  "runtime": {
+    "torch_deterministic_algorithms": true,
+    "warn_only": false,
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "precision": "BF16 convolution/FP32loss unchanged",
+    "warmup_barrier": "all12jobs train3epochs+ownmining then verify model/optimizer/pool equality per fold before epoch4; included in16epochs"
+  },
+  "aborted_predecessor": "runs/improvement_unext/unext_v5_losses_seed42/aborted.json"
+}

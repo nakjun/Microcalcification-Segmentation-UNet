@@ -1,0 +1,184 @@
+{
+  "version": "calcification_refinement_v2_method_plan",
+  "status": "Training components implemented and CPU-tested; new training not started",
+  "base_config": "configs/calcification_refinement.json",
+  "base_config_sha256": "3cfa62e5c27826a3defec52584115c8470e048c3053073616720f800674ab889",
+  "architecture": "Same native two-channel base16 GroupNorm U-Net; no architecture change in first ablation",
+  "folds": "configs/calcification_refinement_v2_folds.json",
+  "folds_sha256": "ce7814e26b6d2065a923b26dd9b13a5b984d0ce10c77dc8334c15dc2a3fd0cff",
+  "diagnostic": "runs/calcification_refinement_coverage_v1",
+  "preserve": [
+    "v1 source/config/checkpoints/selection/completed results",
+    "existing classifier gate and detector snapshots",
+    "ongoing RetinaNet training"
+  ],
+  "data": {
+    "model_selection": "3 grouped folds within original train124 only; pool held-out-per-fold predictions before metrics",
+    "original_held32": "Already inspected development confirmation only; not a fresh test",
+    "previous_reserved156": "No further selection or threshold exploration",
+    "future_independent_evaluation": "Requires separate pixel-labelled groups with patient identity and pretraining overlap audited",
+    "fold_role_handling": "Only each fold training IDs enter sampler/normalization/mining; explicitly relabel fold-validation rows as validation"
+  },
+  "ablation_variants": [
+    {
+      "id": "control",
+      "overlap_loss": "dice",
+      "positive_strategy": "pixel_uniform",
+      "negative_strategy": "frozen_SAM"
+    },
+    {
+      "id": "loss_only",
+      "overlap_loss": "tversky",
+      "fp_weight": 0.3,
+      "fn_weight": 0.7,
+      "positive_strategy": "pixel_uniform",
+      "negative_strategy": "frozen_SAM"
+    },
+    {
+      "id": "sampling_only",
+      "overlap_loss": "dice",
+      "positive_strategy": "component_uniform",
+      "negative_strategy": "frozen_SAM"
+    },
+    {
+      "id": "mining_only",
+      "overlap_loss": "dice",
+      "positive_strategy": "pixel_uniform",
+      "negative_strategy": "current_model_FP"
+    },
+    {
+      "id": "loss_and_sampling",
+      "overlap_loss": "tversky",
+      "fp_weight": 0.3,
+      "fn_weight": 0.7,
+      "positive_strategy": "component_uniform",
+      "negative_strategy": "frozen_SAM"
+    },
+    {
+      "id": "combined_with_mining",
+      "overlap_loss": "tversky",
+      "fp_weight": 0.3,
+      "fn_weight": 0.7,
+      "positive_strategy": "component_uniform",
+      "negative_strategy": "current_model_FP"
+    }
+  ],
+  "fixed_training": {
+    "initial_seed": 42,
+    "initialization": "Fresh same random initialization within each paired fold; do not initialize from held-selected v1 checkpoint",
+    "epochs": 16,
+    "patches_per_epoch": 2048,
+    "batch_size": 16,
+    "patch_size": 256,
+    "stride": 192,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "positive_BCE_weight": 20,
+    "positive_patch_probability": 0.5,
+    "hard_negative_patch_probability": 0.25,
+    "random_breast_patch_probability": 0.25,
+    "negative_centers": "Same frozen SAM training-image centers across four controls; entire patch GT-empty rejection",
+    "augmentation": "Same native horizontal/vertical reflections; no target dilation or small-component deletion"
+  },
+  "candidate_inference": {
+    "gate": "Fixed as in v1; rejected positives remain in metric denominator",
+    "routes": [
+      "boxes",
+      "full_image",
+      "two_region"
+    ],
+    "threshold_grid": [
+      0.001,
+      0.003,
+      0.01,
+      0.03,
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.5,
+      0.7,
+      0.9
+    ],
+    "inside_thresholds": [
+      0.01,
+      0.03,
+      0.1,
+      0.3
+    ],
+    "outside_thresholds": [
+      0.3,
+      0.5,
+      0.7,
+      0.9
+    ],
+    "two_region_rule": "Positive if inside box and p>=t_in, or outside box and p>=t_out; t_out>=t_in. Full native image-only inference.",
+    "SAM_intersection": "Not a mandatory restriction; frozen SAM remains a comparison/reference"
+  },
+  "selection": {
+    "scope": "Pool out-of-fold cases from train124; common variant/epoch/policy/threshold across both arms",
+    "hard_development_regression_constraints": [
+      "Per-arm pooled GT TP >= same-image SAM TP",
+      "Per-arm positive-image count with any GT overlap >= SAM count",
+      "Per-arm negative FP pixel sum <= SAM sum",
+      "Per-arm negative image count with any FP <= SAM count"
+    ],
+    "reference_limitation": "These are development non-regression references, not clinical sensitivity targets",
+    "ranking": "Among feasible candidates: greatest mean positive macro Dice across arms, then smallest mean negative FP pixels/image, then deterministic candidate ID",
+    "no_feasible_candidate": "Return None and report which constraints failed; do not silently relax limits or promote a model"
+  },
+  "metrics": [
+    "positive macro Dice/IoU",
+    "pooled pixel precision/recall",
+    "TP inside/outside predicted boxes",
+    "negative FP pixel sum and per-image count",
+    "positive images with any GT overlap",
+    "GT eight-connected component coverage at any overlap and >=50% overlap, by area1-4/5-16/17-64/>64pixels; diagnostic geometry, not clinical lesion sensitivity"
+  ],
+  "confirmation": {
+    "paired_repeats": "After promising seed42 result, repeat winner and control with seeds43/44; use one fixed group split and frozen protocol",
+    "final_fit": "After OOF selection, fit original train124 for locked epoch count; evaluate original held32 as development confirmation only"
+  },
+  "later_isolated_ablation": [
+    "Larger native context or separate context encoder with original-resolution output; compare at matched pixel budget",
+    "Ablate brightness/noise augmentation only after geometry and label preservation checks",
+    "Classifier gate misses are a separate routing study: current fixed gate loses one held positive and this study does not change it"
+  ],
+  "implementation": {
+    "training_components": "scripts/calcification_refinement_v2_common.py",
+    "unit_tests": "scripts/test_calcification_refinement_v2.py",
+    "coverage_assessment": "scripts/assess_calcification_coverage_update.py",
+    "new_training_orchestrator": "Not implemented or launched in this method-update task"
+  },
+  "literature": {
+    "asymmetric_loss": "https://arxiv.org/abs/1706.05721",
+    "microcalcification_features": "https://www.frontiersin.org/journals/oncology/articles/10.3389/fonc.2024.1281885/full",
+    "configuration_baseline": "https://www.nature.com/articles/s41592-020-01008-z"
+  },
+  "model_FP_mining": {
+    "status": "Core mining function implemented and CPU-tested; not run on training study images",
+    "warmup": "Use frozen SAM centers through epoch3",
+    "refresh_after_epochs": [
+      3,
+      7,
+      11
+    ],
+    "inputs": "Only current fold training images with the current training model; no held32/reserved crops or labels",
+    "threshold": 0.3,
+    "spatial_cell_size": 128,
+    "peak_per_cell": 1,
+    "maximum_centers_per_image": 4096,
+    "negative_condition": "Entire native256 patch must contain zero GT pixels, checked with an integral image",
+    "fallback": "Empty mined pool falls back to GT-empty random breast sampling",
+    "provenance": "Future trainer must bind fold IDs, current model SHA, image/GT hashes, mining settings and saved center hashes"
+  },
+  "training_budget_status": "Planned six variants x3 train-internal folds x16epochs; training budget not spent or launched",
+  "diagnostic_findings": {
+    "coverage_complete": "runs/calcification_refinement_coverage_v1/complete.json",
+    "coverage_complete_sha256": "cc3e8f09d152bc25df1219490d8c5e23106e70597ef78c890bb5993c9f3c0c97",
+    "relative_recall_only_joint_best": "two_region@0.1|0.9",
+    "strict_non_regression_feasible_candidates": 0,
+    "interpretation": "Removing box exclusions recovers GT outside boxes, but negative-image FP rises to12/15; do not promote this diagnostic route."
+  }
+}

@@ -1,0 +1,5 @@
+# Tested with torch 2.10.0; install the appropriate CPU/CUDA build for your host.
+torch>=2.6
+numpy
+Pillow
+opencv-python-headless

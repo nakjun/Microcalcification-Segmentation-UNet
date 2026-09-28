@@ -1,0 +1,14 @@
+{
+  "version": "comparative_held32_seed42_v1",
+  "scope": "Previously exposed CSAW development held32 confirmation; not OOF, not an independent test, not model selection.",
+  "checkpoints": "4 backbones x C/L/H/LH x 3 epoch16 folds, evaluated separately without ensembling",
+  "prediction": "GT-free native-cache full-image tiling; FP32 overlap probabilities sparse-stored at p>=0.3 before targets are opened",
+  "policies": {
+    "primary": "fixed gate AND p>=0.9",
+    "secondary_v3": "fixed gate AND ((fill AND p>=0.3) OR ((NOT fill) AND p>=0.9))",
+    "ungated_p5": "p>=0.5"
+  },
+  "selection": null,
+  "training": false,
+  "reporting": "Retain each fold result and report descriptive fold mean plus sample SD only."
+}

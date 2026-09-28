@@ -1,0 +1,17 @@
+{
+  "version": "external_v3_fixed_seed42_v1",
+  "datasets": ["inbreast", "cbis_test"],
+  "model": "CSAW-S v3 final_fit mining_only epoch15",
+  "policy": "gate AND ((predicted_box_fill AND p>=0.3) OR (NOT predicted_box_fill AND p>=0.9))",
+  "selection": "none; both frozen detector arms reported separately",
+  "training": false,
+  "threshold_tuning": false,
+  "native_intensity": "Existing native_dicom padding-excluded 0.5/99.5 percentile, slope/intercept, MONOCHROME1 inversion, round uint8; original display orientation",
+  "gate_detector_intensity": "Existing VinDr raw DICOM ROI recipe: remove 5px border, MONOCHROME1 max-minus, minmax uint8 truncation, image-only breast ROI, resize 912x1520 and zero-pad 928x1536",
+  "physical_batch_size": 1,
+  "cache": "native shape, p>=0.3 flat coordinates and FP32 probabilities, packed predicted box fills and final masks, gate score, selected detector boxes",
+  "disk_reserve_gib": 8,
+  "annotation_policy": "INbreast all410 inputs independent of XML; no-XML excluded from label metrics, never negative. Exact and Chebyshev1px point hit separately; contour-only overlap is partial annotation agreement, not exhaustive pixel accuracy. CBIS official calcification test ROI localization, not individual microcalcification segmentation.",
+  "inference_GT_read": false,
+  "limitations": ["CSAW-S PNG to external DICOM intensity domain change", "VinDr-trained gate and intermediate epoch1 detector snapshots", "Historical deleted checkpoint files are not verified; retained selected-model and required dependency scope explicitly verified"]
+}

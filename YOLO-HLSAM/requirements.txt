@@ -1,0 +1,13 @@
+# Use the existing environment; validated with torch 2.10.0 / torchvision 0.25.0.
+torch
+torchvision
+numpy
+Pillow
+opencv-python
+PyYAML
+pandas
+scipy
+matplotlib
+seaborn
+requests
+tqdm

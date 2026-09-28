@@ -1,0 +1,1565 @@
+{
+  "source_project": "research2",
+  "files": [
+    {
+      "path": "DeepMiCa/README.md",
+      "sha256": "3ac1031c70c86b4b7634da9c69c92cf40fc891b370beeaa7926d19d38a196c11",
+      "reason": "study workflow"
+    },
+    {
+      "path": "DeepMiCa/evaluate.py",
+      "sha256": "8869c4ae2e4b5bc208359d4c1fd4bff0e3bc50dc2e66d3175062073b34a80695",
+      "reason": "study workflow"
+    },
+    {
+      "path": "DeepMiCa/pipeline.py",
+      "sha256": "a17d7a6b45c3bbfe72f7772649931d0a1d6978ccdeab47fe00fa60e3c691e799",
+      "reason": "study workflow"
+    },
+    {
+      "path": "DeepMiCa/requirements.txt",
+      "sha256": "404f56c054e3f65f36852bcce1cd95091b2c04b0a63090197c4a48fb7ab401eb",
+      "reason": "study workflow"
+    },
+    {
+      "path": "DeepMiCa/smoke.py",
+      "sha256": "6c5c80b44a31d28838a16bf2782b3f369781d8c730f8aa38121e67deacb14c03",
+      "reason": "study workflow"
+    },
+    {
+      "path": "DeepMiCa/smoke_evaluate.py",
+      "sha256": "9c4416211ceeda1cf8d070e11d53b0e1197fabc645f299c999352ee7a3d9b5fa",
+      "reason": "study workflow"
+    },
+    {
+      "path": "YOLO-HLSAM/PROVENANCE.json",
+      "sha256": "23a88cb3a008801c8dd794002c615070629afbaef4c1d564987b8116b4dae3b0",
+      "reason": "study workflow"
+    },
+    {
+      "path": "YOLO-HLSAM/README.md",
+      "sha256": "3aaee620b46e92d69057b39e934c9b7d4f04e507aef52e376946440c11c2c0ad",
+      "reason": "study workflow"
+    },
+    {
+      "path": "YOLO-HLSAM/data.py",
+      "sha256": "282db167f5b82f261f49fefa672cb1eea6d808a43380ac660bb4ef330052972c",
+      "reason": "study workflow"
+    },
+    {
+      "path": "YOLO-HLSAM/decoder.py",
+      "sha256": "7bec348d1699c3007c979c260f276b384e13f371d1d21941b178b2b2c8046cef",
+      "reason": "study workflow"
+    },
+    {
+      "path": "YOLO-HLSAM/evaluate.py",
+      "sha256": "c2e8c9dadeacfb8d0f604f65301fc5f586c6917266a8125185898c8cc84e0697",
+      "reason": "study workflow"
+    },
+    {
+      "path": "YOLO-HLSAM/infer.py",
+      "sha256": "5f00592012ae35849950db9274794ea3748e4f11b8bc63b5983fa60b7185c675",
+      "reason": "study workflow"
+    },
+    {
+      "path": "YOLO-HLSAM/model.py",
+      "sha256": "b226f6aa398cea44271143975d23da9219c73b58189ecb03320deec25a0dca81",
+      "reason": "study workflow"
+    },
+    {
+      "path": "YOLO-HLSAM/requirements.txt",
+      "sha256": "dc2d88b4bc8ccd6c1a3c45072b056f656e23c447c846df3341349191beb4f7fa",
+      "reason": "study workflow"
+    },
+    {
+      "path": "YOLO-HLSAM/smoke.py",
+      "sha256": "27ce83acd359626be59f1f571a71ee1255c09c35fa6f54c8bbc29973a8ac3f4b",
+      "reason": "study workflow"
+    },
+    {
+      "path": "YOLO-HLSAM/smoke_cli.py",
+      "sha256": "a0750e49437cc701775f7a5f1d26011de3b8fd3684c48e88b991155ea98ce78d",
+      "reason": "study workflow"
+    },
+    {
+      "path": "YOLO-HLSAM/train.py",
+      "sha256": "cf20e9065fc78eb56d8e22389afcd918c9a7f29d77e49864ed8fc47ac142ab57",
+      "reason": "study workflow"
+    },
+    {
+      "path": "YOLO-HLSAM/upstream.py",
+      "sha256": "be4771ede1e107a3a2da1426601dfdd3d7f38e2558d5bc7028b9678bc094c628",
+      "reason": "study workflow"
+    },
+    {
+      "path": "configs/calcification_gate.json",
+      "sha256": "9ce5cfa3cdcf0f8c5dc29602b7bde9eb1f7c126cadce4ab033c7c9336a71c284",
+      "reason": "explicit source path in scripts/extract_calcification_features.py"
+    },
+    {
+      "path": "configs/calcification_gate_finetune.json",
+      "sha256": "8404f33628433f6d518c65139fbd435de70aadcc6132c3a482481d10894dc955",
+      "reason": "explicit source path in scripts/train_calcification_gate_finetune.py"
+    },
+    {
+      "path": "configs/calcification_gate_sam.json",
+      "sha256": "8d61f1a518c7b41f6bf9167176f2e4c0fc429eb864fb07454ea3ec37ac74c477",
+      "reason": "explicit source path in scripts/prepare_calcification_refinement_baselines.py"
+    },
+    {
+      "path": "configs/calcification_refinement.json",
+      "sha256": "3cfa62e5c27826a3defec52584115c8470e048c3053073616720f800674ab889",
+      "reason": "explicit source path in scripts/prepare_calcification_refinement.py"
+    },
+    {
+      "path": "configs/calcification_refinement_v2_folds.json",
+      "sha256": "ce7814e26b6d2065a923b26dd9b13a5b984d0ce10c77dc8334c15dc2a3fd0cff",
+      "reason": "explicit source path in scripts/test_calcification_refinement_v2_runner.py"
+    },
+    {
+      "path": "configs/calcification_refinement_v2_plan.json",
+      "sha256": "c3c8369620c6fe37d73a3f7902d025cbfa6bd6605b9b0ac9c62f00b97476dc13",
+      "reason": "explicit source path in scripts/train_calcification_refinement_v2.py"
+    },
+    {
+      "path": "configs/comparative_held32/protocol.json",
+      "sha256": "f6ec0052097154c5ee954d773f0e6f454af0746b4056d43ef6faa72665bd6304",
+      "reason": "study configuration"
+    },
+    {
+      "path": "configs/comparative_study/plan.json",
+      "sha256": "e283b61602a2e92f1c0fb32ee3b831a19f56e6920865c8173684087a431affbf",
+      "reason": "study configuration"
+    },
+    {
+      "path": "configs/external_comparative_inbreast/protocol.json",
+      "sha256": "7e9cb86e5d13a065d059dee666a9018c0efe27dec0802cf5fbcc9fe8c25495b7",
+      "reason": "study configuration"
+    },
+    {
+      "path": "configs/external_v3/protocol.json",
+      "sha256": "7714ddecff042f9023d53462e71d3530232af989a1d596f9ea4ae64ffbc2b4dc",
+      "reason": "explicit source path in scripts/external_v3/common.py"
+    },
+    {
+      "path": "configs/improvement_unext_deterministic/plan.json",
+      "sha256": "fed8800ad99513a47d52b999e189de25242c72a12e72571028fcf28a42d3304c",
+      "reason": "study configuration"
+    },
+    {
+      "path": "configs/retinanet_roi_pair.json",
+      "sha256": "8275e21de925ab5a0f77b7b3e21b77b3c599ce00dd5ba344bca8e789fa53ef88",
+      "reason": "explicit source path in scripts/prepare_retinanet_roi.py"
+    },
+    {
+      "path": "configs/v3_ideas/idea1.json",
+      "sha256": "8e7ed1acb63f7c5860c6f0c59b2fe5a658afe5244c7b8f9843b60e38522f2ce6",
+      "reason": "explicit source path in scripts/v3_ideas/baseline.py"
+    },
+    {
+      "path": "configs/vindr_training_protocol.json",
+      "sha256": "b0bbb3b46ab244516d044e6da4f456311bc533911be29ee9bf44fd12b620fb71",
+      "reason": "explicit source path in src/mammo_baselines/runtime.py"
+    },
+    {
+      "path": "external/DeepMiCa/LICENSE",
+      "sha256": "e05feadd8d58f65cd5ee466735e9be1da7f23b7b389c793d07d68e1a68521969",
+      "reason": "upstream license"
+    },
+    {
+      "path": "external/DeepMiCa/Step2_Segmentation/_03_Train/Losses.py",
+      "sha256": "cc2a6a5012d1f72bfdce51a89e3d7edb8e06d41d92cc56a2d9c9db3f21c88211",
+      "reason": "explicit source path in DeepMiCa/smoke.py"
+    },
+    {
+      "path": "external/DeepMiCa/Step2_Segmentation/_03_Train/UNet.py",
+      "sha256": "166055cbc2c0966a104bfc158783525820f8756941ea55329c2d32c6db05250a",
+      "reason": "pinned DeepMiCa segmentation model"
+    },
+    {
+      "path": "external/segment-anything/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/segment-anything/scripts/amg.py",
+      "sha256": "24b3edd3f3880e75b64d2b8d67e1b7d9519f46f6479d1137c9ac3309e9d43105",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/segment-anything/scripts/export_onnx_model.py",
+      "sha256": "c0270d82d96cfb3348471f349b6cb5b224833a0ea101bd8091dc5c364695b3b2",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/segment-anything/segment_anything/__init__.py",
+      "sha256": "c8d8eb649610b2d51f138481a89617a3dcb61106465121dcb1c2f23affc84c30",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/segment-anything/segment_anything/automatic_mask_generator.py",
+      "sha256": "71c698d2b6cbf5a62eafa5f12106fdf3bff676102adf1aed2287df3b3990b4e0",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/segment-anything/segment_anything/build_sam.py",
+      "sha256": "77bc4faf728118625ddd184dc4e6375bd1b5c636fc66fb429f9fc5276f331cc5",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/segment-anything/segment_anything/modeling/__init__.py",
+      "sha256": "47f6363b86c0bfaa7a6abf723975136d17fae4a5f002d2814a5cce8834d18980",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/segment-anything/segment_anything/modeling/common.py",
+      "sha256": "59a53bfa5d0a4d446df7f2bb57d2e95808b130601592b934600fb663d256ce17",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/segment-anything/segment_anything/modeling/image_encoder.py",
+      "sha256": "1665ada2902722c9a8cd566c840e324d623ef2b12f7d9ae9f38b24aed0e39886",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/segment-anything/segment_anything/modeling/mask_decoder.py",
+      "sha256": "6a2455e990515c67a061187c92c236b879b189f21ef6ebfce1627cae9a6b2f93",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/segment-anything/segment_anything/modeling/prompt_encoder.py",
+      "sha256": "bd8f2f5903f0647f55c21c608bcbb334eec2901ebe76aa41061b1c513df4a06f",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/segment-anything/segment_anything/modeling/sam.py",
+      "sha256": "2d501173b7345f6829f745a2ade240c98026f6b3237bf6cf8e9473405e86c54e",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/segment-anything/segment_anything/modeling/transformer.py",
+      "sha256": "566a8f6db8b608398de939548bd0f485b21752fda2bdda36900e6444ef938d11",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/segment-anything/segment_anything/predictor.py",
+      "sha256": "ab66c29ac0b5b204d23997ef49d8a2476f71b596ce97e35efbf116cfc2118fce",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/segment-anything/segment_anything/utils/__init__.py",
+      "sha256": "34bd8069c54764e7b8d73a78905dbe6467140a2f73170875128f6ca4d8cdd0aa",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/segment-anything/segment_anything/utils/amg.py",
+      "sha256": "5c10f8dd63facb642ff090f61426b35b3c6c3a07e72839595cb04d74828b1d39",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/segment-anything/segment_anything/utils/onnx.py",
+      "sha256": "b4410ac1dc9a7bb3a09827520fa08454f9b397608775e2fe4ebfb7c8dbb02666",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/segment-anything/segment_anything/utils/transforms.py",
+      "sha256": "26a649f2bca8a4a24b4d56617487a9a54c4279e559b2b813c9de38f58a60107c",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/segment-anything/setup.cfg",
+      "sha256": "ca25a496fbec2b44f7747d9bc64c206a0cd6a447a1452611f756a56658cc2395",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/segment-anything/setup.py",
+      "sha256": "be8672c2c99f3295d25721faa4524b314c8c08965d853e55fc42183b809d3842",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/CBAM.py",
+      "sha256": "12c5691899ecc18ec901fb3d40550090005e9ef2586fc0d2c4c3fd3fe05cdd2c",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/GPU.py",
+      "sha256": "f138d4c537d2e6be6366414957fa2d8d04f6cd10afe90adafd949f6c50d679cc",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/baseline/r50-csp.yaml",
+      "sha256": "e8618458fddf5de20855bb2ff988a9bcc03db343f6208d9b55aae3304040a48a",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/baseline/x50-csp.yaml",
+      "sha256": "76e92d35574a1bc92de2986be0112c23f1585421b4ea05c41c6dffd3c515e92c",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/baseline/yolor-csp-x.yaml",
+      "sha256": "c8f74ca5cbd10ff5108740d862d68be4274819a9debbe68b19e73019fd2a8495",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/baseline/yolor-csp.yaml",
+      "sha256": "3c718e178d926d75b6beb52d4fff9facf1843a1a62270d6f14b1b82674486630",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/baseline/yolor-d6.yaml",
+      "sha256": "1f3571273f0b851a90e505963d3ed062c58ff611e65cf8226ce92a9c50551f6d",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/baseline/yolor-e6.yaml",
+      "sha256": "da3961c8670a2a726c1d525fafc42ce736c7e98c590294933026ed3c69ab5fa9",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/baseline/yolor-p6.yaml",
+      "sha256": "e242cf6e5b8abe32618a0e77ebdd293b8e43c5cf05a2c069de9f159a321a34fa",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/baseline/yolor-w6.yaml",
+      "sha256": "28e708f32a5a1e39e46dcddd6eaf906609300b34ba6e85925d76dec0ca741620",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/baseline/yolov3-spp.yaml",
+      "sha256": "9375a42cf1020699530e2a2288adf8829f9b16c0c8dc2d3cfd41638ce75f2f54",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/baseline/yolov3.yaml",
+      "sha256": "930aaaef8c522fd34b38150ed4549dcd5c311b7fb9f139c4d41744fb93828962",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/baseline/yolov4-csp.yaml",
+      "sha256": "4e7367f7c75addfc4cddb14008f32294120624ef8cb5d0c142eff3175285aebb",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/deploy/yolov7-d6.yaml",
+      "sha256": "5411a8ab37da4918330674e5bf891fcf492b5d063d256caafa66f11c20c6e4ee",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/deploy/yolov7-e6.yaml",
+      "sha256": "cf3916810d20be051b3c4e47ea4b860dcb68b12f1b6b2fbc0b206c64c662ae1e",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/deploy/yolov7-e6e.yaml",
+      "sha256": "e1bf4ab5c4a42dbe2e70dc8db4bdf3846a16f7a915bfe4986567c6791e78c2f9",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/deploy/yolov7-tiny-silu.yaml",
+      "sha256": "95349126b264b2c61d03c7cf5e26fa9fdf13f511310433bad9b1f6cce7f3162f",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/deploy/yolov7-tiny.yaml",
+      "sha256": "7396769acb0c25b5ae24ee0aa07879fd7118083d5de3e1a16155e37f3fda75d3",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/deploy/yolov7-w6.yaml",
+      "sha256": "7ceae16b1eab37bc2be37cf17262cd611c6bcec82e60acdbacc2787992bf3cde",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/deploy/yolov7.yaml",
+      "sha256": "4a952fbf928594aa0610900a15cb454200642cc5cdbed237c25d77950f5ee448",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/deploy/yolov7x.yaml",
+      "sha256": "05eda55be29c65efc0831048aee03ec6d131faf5f027dfc454e47bfd4a6b07ba",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/training/CBAM2.yaml",
+      "sha256": "9b1b0ad11802fa6221ecdd78684f92b954bcf1f0d6826c9fd358bbbac9f29f82",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/training/CBAM3.yaml",
+      "sha256": "f1b1ca0d52717ce1de1229c15df0fd4b878100b5cc446702a67c0110a2a070bc",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/training/cuda.py",
+      "sha256": "129dcf10c26c29df47609e58d85e211dfd70bde04d26847253ce53a0162ed436",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/training/yolov7-CA.yaml",
+      "sha256": "3d0642cc5c17a41088d9a1e550ea73cfeed398a40085ea998fba4c7bc05f470a",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/training/yolov7-d6.yaml",
+      "sha256": "91398a427e22a861d68c9663c651e387c2cdb0a20dac038a6f813f10e50eab0d",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/training/yolov7-e6.yaml",
+      "sha256": "292d75d213f27d72b829772c6bfc1e6ba39e9d4578f0cc90622e66f6f32c9825",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/training/yolov7-e6e.yaml",
+      "sha256": "1319cef95731fbba47fdd9dc99cf5a79c8aec0070b8a2be1f9b1ac27f2a3bfa3",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/training/yolov7-tiny.yaml",
+      "sha256": "0f6e14494a7ec93160ddf93ad3c04200e841fc8c88b255d30e5f31216f741b08",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/training/yolov7-w6.yaml",
+      "sha256": "91fcdc7133d7a6b6a6844ea7e8aae2cfaeece86ec49f7613bb5e2b8e668d39a5",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/training/yolov7.yaml",
+      "sha256": "6ae7003bff2e80e3abffaff5b6c2df35a0662dc5d9f3a8843042065c216c1ddc",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/training/yolov7_CA.yaml",
+      "sha256": "3d0642cc5c17a41088d9a1e550ea73cfeed398a40085ea998fba4c7bc05f470a",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/training/yolov7_CBAM.yaml",
+      "sha256": "69013319e960df501bd2f1a48691d153591430cf5f7482abfe4bcc2147800e27",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/cfg/training/yolov7x.yaml",
+      "sha256": "064b9ab1d36d32cb57d4f59a08559fd5ef8e15a4b87d2f61d102ed5413c35b09",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/data/coco.yaml",
+      "sha256": "5a17e7a1024a6f6fcc4dbb3466df0244de76bcae71d5ed0ac6a47b867a04b7a4",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/data/hyp.scratch.custom.yaml",
+      "sha256": "ced28ac97f29e802bffe4a7ebb338ad2a19bb59fb5ffb4967a6e13e6a461de3d",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/data/hyp.scratch.p5.yaml",
+      "sha256": "7f95e290ea275175748804966c5c1141aac17451afc83a605ba10dfba49c2729",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/data/hyp.scratch.p6.yaml",
+      "sha256": "891a77bbb6fc11f6a91a8a0461902a8d192889c03cffbb8378a19b8578f5523b",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/data/hyp.scratch.tiny.yaml",
+      "sha256": "c83e3ebd8d201918f81e429aebc9aca0f86ab2882bda1a0fde2fde1d5ce21b1d",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/demo/demo_hqsam2.py",
+      "sha256": "30a3db1cedb2147641dea3a61c44b14d5f8571bf878fb1d9fd93963c7cdb7a3c",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/deploy/triton-inference-server/boundingbox.py",
+      "sha256": "3ea3d853ec9f40f648250e2c2daa076bb7b4fe5c1ecc6e5fd775a15930e42a0f",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/deploy/triton-inference-server/client.py",
+      "sha256": "57ea043aca8465bd3305c467cd1bc863d9f3277411deaab75321b1a9db94f4a7",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/deploy/triton-inference-server/labels.py",
+      "sha256": "910672f092f20af5140eaec2afb9ffa49c00568a18a05e2752fd21a9995223ac",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/deploy/triton-inference-server/processing.py",
+      "sha256": "65dc0b66699711606bf3b9267052f10bfa1d844280d161465169dc45631997c3",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/deploy/triton-inference-server/render.py",
+      "sha256": "02ac8ec92278e3c04a1f7cb8814860bda15ef892bc4f9bc155bcc8a2c2c0675d",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/detect.py",
+      "sha256": "a237904982d1154aad767cdb8970c6a61cc95c4ced243671052a3555548b48bc",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/export.py",
+      "sha256": "6ef0fce68f3cea0c5c48ab3fd40ce5eb6e45a35d35bec88dedd74015b861c5bb",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/hubconf.py",
+      "sha256": "6cc7a426d7a89d625352bc6f8184d237945ff840fa7efa150db79f8873fc85de",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/main_gradcam.py",
+      "sha256": "407b0b8777a6c0dc1a2b37d749350196a864ce01bf1c767c3b14355812fd4997",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/metrics.py",
+      "sha256": "638e69a94ea8ebfe945baf49b11f5cdc1058add811dcc40b28b02e06e677d4b6",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/models/__init__.py",
+      "sha256": "0486028fa4d1cc658211b606e5935a4c74386a6e9cf5055b812f3484b1b46e57",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/models/common.py",
+      "sha256": "850d2fe600e2ed16f1889df7700b77956f0233814d00a096320dba069964fd28",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/models/experimental.py",
+      "sha256": "883d968da483ea9f80449894754c621266fa6f2c3b18a3dd7b360c3373e85d56",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/models/gradcam.py",
+      "sha256": "c4a7a800740487cb8f63517f14cb9a82e8f3ed2dd1a8522d34ba8fb1317d4b7f",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/models/yolo.py",
+      "sha256": "1ed95bb2b04b0279f28d12b73fb88d4a3ddb33e6d08ed41788576e9d7dac446c",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/models/yolo1.py",
+      "sha256": "420a89978983cdf6e934df5faa895196c679e9f4b8517bdd19b26f75ed4dafe0",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/models/yolov7_object_detector.py",
+      "sha256": "68f65a667f897923dd4111bc209bd08a93fa9add09ed5238ef79ee5ec352e847",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/requirements.txt",
+      "sha256": "3b8b272e9d807ea14ebfa0f70f2953b24b47a78347fcf7445117a3546bdcb97f",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/__init__.py",
+      "sha256": "b87ca1e95cd54b81766e8c74acf0e937952639529e40d2b4088693286f49419e",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/automatic_mask_generator.py",
+      "sha256": "66df266dbe14412305ae3398f0ec1bb21b303a93216b102d767e6c4ee5d4c3d7",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/build_sam.py",
+      "sha256": "ff667378b509bd58a9bb0c4a96f3ba0e4e70ff34aa1bdf8b282ce73671942197",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/configs/sam2.1/sam2.1_hiera_b+.yaml",
+      "sha256": "e73f9e9547b305040552ee943ebd3a34cee5727a76fc2ab88b87f7b28b430754",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/configs/sam2.1/sam2.1_hiera_l.yaml",
+      "sha256": "545e4325aa5c19a1615d43c946b07276ed4c57214eacf1437e38fa3d9374f636",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/configs/sam2.1/sam2.1_hiera_s.yaml",
+      "sha256": "632e5cd0104f5ab6cd4f9d2dfd80a8e7240e481ad7960a13cad2ae3504b88dbd",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/configs/sam2.1/sam2.1_hiera_t.yaml",
+      "sha256": "43e114f609a1af7efede061f5c186119d498acd31f118f300c07acf57d4a5eca",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/configs/sam2.1/sam2.1_hq_hiera_l.yaml",
+      "sha256": "a51bde6c47d8c76b49c3b7b2213c382b96f9827ca1f55ce4c4fb8096a134df5a",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/modeling/__init__.py",
+      "sha256": "34bd8069c54764e7b8d73a78905dbe6467140a2f73170875128f6ca4d8cdd0aa",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/modeling/backbones/__init__.py",
+      "sha256": "34bd8069c54764e7b8d73a78905dbe6467140a2f73170875128f6ca4d8cdd0aa",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/modeling/backbones/hieradet.py",
+      "sha256": "03785581ca304d0451ae0df7a08ee0bf1e1dbe66fad285066e6b9ffc0d88d64f",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/modeling/backbones/image_encoder.py",
+      "sha256": "16eaad232220386f510ca8dfab8655e63699977149a4daf9ce9c6f374e6777a9",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/modeling/backbones/utils.py",
+      "sha256": "84bd48cda1ad468fb8c231d0c2eb83ad53386633d6e63ddaa6ed929c5521bdba",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/modeling/memory_attention.py",
+      "sha256": "07358cb7f58ec3788e88ff4e6415f8a9d628a3963529d6e2c915494a5347c8e2",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/modeling/memory_encoder.py",
+      "sha256": "73f7089ae5fdacdfcaaf3deca1ca6d9f84d89e7deb9cf97589622a9ef17ba42f",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/modeling/position_encoding.py",
+      "sha256": "14ae89d7ae68f61e2ffcba09eb171d8df9a7298332d4da99036d703294f89ec1",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/modeling/sam/__init__.py",
+      "sha256": "34bd8069c54764e7b8d73a78905dbe6467140a2f73170875128f6ca4d8cdd0aa",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/modeling/sam/mask_decoder.py",
+      "sha256": "ca3523c58365574faddf1bfb54f374e4b4beba05127185ea2b17d22b916e099a",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/modeling/sam/mask_hq_decoder.py",
+      "sha256": "e9ecebb403219242fe68d08298733d5b7adde9ab16d15e852ab6bd212424255f",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/modeling/sam/prompt_encoder.py",
+      "sha256": "486596f5ba976cb9ced3836d65f1793dae586be2180567a451098f96c45ae401",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/modeling/sam/transformer.py",
+      "sha256": "17aac13abc8f73023f6be4b78af708df9f9f254964729421b1ba60e72a9011c1",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/modeling/sam2_base.py",
+      "sha256": "6d81450e897d0735f9be369771f2b3fb6eadb90dd3f3ac16b3f7a8c8eb1a052a",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/modeling/sam2_hq_base.py",
+      "sha256": "be6f6d6799d85c38a29d5e385de03cde0a58342d947727001acb34dcec6eff57",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/modeling/sam2_utils.py",
+      "sha256": "e35bbf13bc2e544a0272cd3f9539af38a752676ac3cd744be31cd8220afee804",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/sam2_hq_video_predictor.py",
+      "sha256": "0d7b8815bb21fd362d33523bbecad6bb7bbd536c5272b26be8a33491c4576b97",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/sam2_image_predictor.py",
+      "sha256": "e9fa4bbac3a2076e755f29eab2d1d8679c32bb148e485c997c532519a24e2e49",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/sam2_video_predictor.py",
+      "sha256": "e0c054112f21bfa63620f2026c8bb2e0f4e284b138d09426a08d39f2e882c3f2",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/utils/__init__.py",
+      "sha256": "34bd8069c54764e7b8d73a78905dbe6467140a2f73170875128f6ca4d8cdd0aa",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/utils/amg.py",
+      "sha256": "b7b33090e2af72e04dbb815c8f32aff41a4ed1abf9668f62b59f1bdd640ca5d8",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/utils/misc.py",
+      "sha256": "01600c01c161cd079d7106fb1d4da845cf91aa31ab2bcecaf8cb151b6d6d20a2",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/sam2/utils/transforms.py",
+      "sha256": "ba3a64f4600c62f209206a6df3b40e3fcf133edae32fad658831bb0c2a6d1146",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/setup.py",
+      "sha256": "d82c616fee8d0af249c5b68d2166eefc6843b4f0abac0faf335504169f8a698b",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/test.py",
+      "sha256": "d00187d42cbf847b970f861846d0b17925392302e761981cdede20a4a4de8d24",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/train/segment_anything_training/__init__.py",
+      "sha256": "4ff0f342ca15d3edab8f43c0abfb2179e11dfa70662f51a1d293e6b9279f2195",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/train/segment_anything_training/build_sam.py",
+      "sha256": "9dd66a90524c63458c2cacec971963834c92e9f87ff1de99485f7b1c2b4dc9b8",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/train/segment_anything_training/modeling/__init__.py",
+      "sha256": "47f6363b86c0bfaa7a6abf723975136d17fae4a5f002d2814a5cce8834d18980",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/train/segment_anything_training/modeling/common.py",
+      "sha256": "59a53bfa5d0a4d446df7f2bb57d2e95808b130601592b934600fb663d256ce17",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/train/segment_anything_training/modeling/image_encoder.py",
+      "sha256": "df2cec9aad805c14747b826a5652989aff1c2e7b7c7e5c514dc2633939bcae82",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/train/segment_anything_training/modeling/mask_decoder.py",
+      "sha256": "b0471295dbca23f87fb0294441bbb202dfeafa664164b48b1301e19769979668",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/train/segment_anything_training/modeling/prompt_encoder.py",
+      "sha256": "bd8f2f5903f0647f55c21c608bcbb334eec2901ebe76aa41061b1c513df4a06f",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/train/segment_anything_training/modeling/sam.py",
+      "sha256": "87397b885bc85f47a0414dba535166f22c3d5414452687cc03317e3fdc5a0dac",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/train/segment_anything_training/modeling/transformer.py",
+      "sha256": "680c463c365bacb9304468f91addc8131d8de8aeb96bfc3e39ebb365f01a29a0",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/train/segment_anything_training/utils/__init__.py",
+      "sha256": "34bd8069c54764e7b8d73a78905dbe6467140a2f73170875128f6ca4d8cdd0aa",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/train/segment_anything_training/utils/transforms.py",
+      "sha256": "5d64e083cc0f68dc59c20d75f49a21b306a772b8a35560b3287b5084a9e7711a",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/train/train.py",
+      "sha256": "4154eadaea2bf2c4d1e4c5de721dc795196786e64de66e13225e04a2bc61ced1",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/train/utils/dataloader.py",
+      "sha256": "ecdb96dc7b4b81295a07e861f417a61efd1a5fd176c429577b75263a73ee4c47",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/train/utils/loss_mask.py",
+      "sha256": "6039964be3bf13a439134e46e26280bf1b95a61991c0363f9e01469b2e649ba2",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/train/utils/misc.py",
+      "sha256": "4115a64781876be8dc27a3824c448d6387da909dd0438b4d981fb970a3abc421",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/train.py",
+      "sha256": "289eac6c3d3b82a3c8f077dc2bf300570e24d540e2651d0d993d8ed7495e9ce6",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/train_aux.py",
+      "sha256": "a75a0c027d26b17b316baf38e2237ecd9705907c318ff091a44acc92f42457aa",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/utils/__init__.py",
+      "sha256": "f338ac6f9d6e4ad4cd9cb08a5bbb1e58d972bc00e64251c54060f526e488c35c",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/utils/activations.py",
+      "sha256": "0b9b091d4a84054d2e1cde2938c0458b5c65c65d354d5da5d6216ed1c47f6387",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/utils/add_nms.py",
+      "sha256": "ac9b48e316ffde353b34ca2178632411b30be4a19e3fd394a4c3233f40616654",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/utils/autoanchor.py",
+      "sha256": "98711c63a1a1f5f314b0d55feb3a15c88078cfba38198eb95de611653e1a52a2",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/utils/aws/__init__.py",
+      "sha256": "180307a47d0f030502c6bfc649cb5fbf57f1824aafcbd9a953514169f8499a49",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/utils/aws/resume.py",
+      "sha256": "26dbd4475ad939f3389566c3064becd36efd0d592c5a4aea592aaa21534cbcb0",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/utils/datasets.py",
+      "sha256": "4f633b054a9d5f0210c3cd13d4197898fe72673b41854d244517278c095e94ed",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/utils/general.py",
+      "sha256": "5b6a3a561f47f6810d57818046ff23170925faf372ace92b4ba5c975ffaf78ec",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/utils/google_app_engine/app.yaml",
+      "sha256": "500c32470203bae90c0d04dee7129da7dbb09752480032633187a6747a380686",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/utils/google_utils.py",
+      "sha256": "39950e4729140d5f8cce4f0b8f59da392ae59f050d32ced383387c2175c23625",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/utils/loss.py",
+      "sha256": "3f5df3d78e72fa2fb47746e776872297c24c106361b7339513fe8047cac600d2",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/utils/metrics.py",
+      "sha256": "9763aba82b882406191bf1c6484325261315e1e89e44bc147025588cde97edea",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/utils/plots.py",
+      "sha256": "23a3465962028409d5468acf99885cb11cc5e23efbe009883411caf95b6aad3f",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/utils/torch_utils.py",
+      "sha256": "eebe2e8504989840a1594acd10db242f4fee8c7f836c4a054048282f7d9ea96c",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/utils/wandb_logging/__init__.py",
+      "sha256": "0486028fa4d1cc658211b606e5935a4c74386a6e9cf5055b812f3484b1b46e57",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/utils/wandb_logging/log_dataset.py",
+      "sha256": "e4bc9d2ccef016e2caaf35bb513814a2f2be3ae5870b0448a16a0a30a1db49a8",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/utils/wandb_logging/wandb_utils.py",
+      "sha256": "6892c2a79e361d35a4eb25f2822cc890249e4e86d8a0ad9a8d0e9c71ee4e16a2",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "external/yolo-hlsam/yolo-hlsam/yoloheatmap.py",
+      "sha256": "3698dea4fd1fb3a8c4654ac87ccc7be43af547b08df5e1567e7e5c102bf444f0",
+      "reason": "upstream model dependency"
+    },
+    {
+      "path": "scripts/additional_baselines/deepmica.py",
+      "sha256": "827061351d3537c75f1766b4d2832a17712adeebb4256fe5f648622173009688",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/additional_baselines/segmentation_metrics.py",
+      "sha256": "c5925202006f9ce86d92cc30fd130b1224dd882912a2609bcd74c5f15fdc3e38",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/additional_baselines/smoke_deepmica.py",
+      "sha256": "45255e4f0a520898c4ac34fb47047bf6b52f876d8e39bf3842d5eac39d77613e",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/additional_baselines/test_segmentation_metrics.py",
+      "sha256": "843b565292a49a450a130744b5dbd106492bc72e3ba3728ccb0b9a2f0c1cdcd5",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/additional_baselines/training/benchmark_native.py",
+      "sha256": "023dd8f95ac552ad79524c3eea5210db2ef3b4fb5940c62c8c91cd86c66651cc",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/additional_baselines/training/benchmark_native_3fold.py",
+      "sha256": "9a6c950dc99ea2c30cc1c5dad8897cc48bcadf3bd4db1e94c2e90e8543d56732",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/additional_baselines/training/benchmark_training_steps.py",
+      "sha256": "98b82aea3d8b6188612df16cc3a48f7782de7acd8eae1b822b3fd17fb224a5b0",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/additional_baselines/training/gpu_preflight.py",
+      "sha256": "1b09c32eefba65e5fd34f2c749671461d016a9729711cd53b377dee799ae23ce",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/additional_baselines/training/internal.py",
+      "sha256": "97fac7b25959918fba3dba9f5f8a1f730fb7e70b21eb10ae803d699415587408",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/additional_baselines/training/prepare.py",
+      "sha256": "4f3c4abf483d5f9340d7b044082b19efed188a7f0214165a12e2c52371ae02d2",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/additional_baselines/training/run_training_steps.py",
+      "sha256": "1e7f6c658b6f2c6a9dcbcdc9ccdbd7045130941f6fec26014ae179979118564c",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/additional_baselines/training/worker.py",
+      "sha256": "5e440a9ff859fb11c466284764b5816453695740c426bde322ecd83a4040ad47",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/calcification_gate_common.py",
+      "sha256": "6321030e1f5dffd9bf21cbb475e1a404a1fda344970376c582dadb4921090ac9",
+      "reason": "import from scripts/improvement_unext_deterministic/verify_model_source.py"
+    },
+    {
+      "path": "scripts/calcification_gate_sam_common.py",
+      "sha256": "47634e5e05dbb4be0de516e548ab45aa78a95125c06ae78a92cd203c92f19468",
+      "reason": "import from scripts/external_comparative_inbreast/infer.py"
+    },
+    {
+      "path": "scripts/calcification_refinement_common.py",
+      "sha256": "20c221123799800cf5e25349a16bc563e73fc04cb0709c596ba1ab05aed16465",
+      "reason": "import from scripts/external_comparative_inbreast/infer.py"
+    },
+    {
+      "path": "scripts/calcification_refinement_coverage_common.py",
+      "sha256": "1799543b9bcb29ce1aa26b8ee624039fbd6aeb458b9f1faa0074a5a475e2428a",
+      "reason": "explicit source path in scripts/improvement_unext_deterministic/common.py"
+    },
+    {
+      "path": "scripts/calcification_refinement_v2_common.py",
+      "sha256": "4b89c26191e71f840a5c3d49d2de3d9b49fe54805d682c7d5c71f49929caa235",
+      "reason": "import from scripts/comparative_study/verify_training.py"
+    },
+    {
+      "path": "scripts/calcification_refinement_v4_common.py",
+      "sha256": "de69c40e7bd401a4b7b6c26d58d6085a6f6ec369f635197dce7de7e1a228e664",
+      "reason": "import from scripts/calcification_refinement_v6_common.py"
+    },
+    {
+      "path": "scripts/calcification_refinement_v5_common.py",
+      "sha256": "70b4de90073d468d1c36bf5458819cc5c47a2a882a1b1f56204a56b11ac703e4",
+      "reason": "import from scripts/comparative_study/verify_training.py"
+    },
+    {
+      "path": "scripts/calcification_refinement_v6_common.py",
+      "sha256": "3b0421459a631537d842efdb8ae3a76f766c70992aef2dd861df1deb6fc7ac23",
+      "reason": "import from scripts/improvement_unext_deterministic/evaluate.py"
+    },
+    {
+      "path": "scripts/comparative_held32/common.py",
+      "sha256": "140bf842d4aa23230d4046319f0ef4388ffbfac6bbe8df254e719656130a1d4a",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_held32/evaluate.py",
+      "sha256": "aca6fe06c811322261ee0d11f71fd8228edccd57238e273ab08cc7642e7b7df4",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_held32/infer.py",
+      "sha256": "433c1c2555cd32638c33982bf5d640b5783a6ad72ef749b612bc77d1e7cc07f6",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_held32/prepare.py",
+      "sha256": "6b4eaeb423296d558201fbf014b795c35c5311c19e8428ff4b659deebf5f6ef7",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_held32/report_math.py",
+      "sha256": "4838f1fc5e6e240aceb85889907bfbe7d567363239fc1056b0034142a55d3f82",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_held32/test_held32.py",
+      "sha256": "416ea64f5a2f2226ace699f8bfd49a694b5ff69d0f03b7629e20ec477bc664e8",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_held32/verify_counts_independent.py",
+      "sha256": "4982bca7fb38e0fe1a5be2c342ddce00b393c632fb40531d761da0983eee6b26",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_held32/verify_inference.py",
+      "sha256": "6a587568bf589ff2b3d9f34add249e6ee4c4ff809842c329d777c1da4578627c",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/common.py",
+      "sha256": "4d67ed98512f9f83059238c5d7379bd536b2281a5cb06f40826e352c11c964aa",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/evaluate.py",
+      "sha256": "90e0a3be0b1d1f77ddccef9f89412f7234836f4f3cfde498b9ba34d073b565f1",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/miner.py",
+      "sha256": "8331981852178e671c326af9146feb76348d37deddce2214f31a5a8022ec058a",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/model.py",
+      "sha256": "92a363276d7df81034b878b9c3fbc0594d0d8cc1cd98ac47f417cef43548d5d9",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/models/__init__.py",
+      "sha256": "1db84b187b4df54dd5f9367e6f8c61892273d8e52059ea4c85c85b0402827c1f",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/models/factory.py",
+      "sha256": "af1f8ab89e6181d7f31e7f81b60f5dd1ca2a56ff2c75acd6c2cd4f237b294380",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/models/test_models.py",
+      "sha256": "0103bfbabd11c7f7e20571a02f226bf4d9bd0ba99f881e3082e682cc3c7b5ff7",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/models/vendor_attention/LICENSE",
+      "sha256": "e31437ee9878a724adb6d59034747ed8100bc18215081c34168f5124e70c142d",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/models/vendor_attention/PROVENANCE.md",
+      "sha256": "86f5a57ceb8933830cb95f282a75ba7fe5c2ee87261b19358c26f73f34b3d0fd",
+      "reason": "vendored model provenance"
+    },
+    {
+      "path": "scripts/comparative_study/models/vendor_attention/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/models/vendor_attention/compat/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/models/vendor_attention/compat/networks_other.py",
+      "sha256": "9fdcecf29b9767c3853200925566f8d4b447c6e64e2b4aa77ac891d459e299e0",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/models/vendor_attention/compat/unet_2D.py",
+      "sha256": "1239fb31474e92a103e2971ce57a8a6658371cd89b242efe3e646bd7df94abf7",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/models/vendor_attention/compat/utils.py",
+      "sha256": "666ab4a6a5d81f74564d27678108a5356c19bac085e3736a4ee7f22af49913a2",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/models/vendor_attention/original/networks_other.py",
+      "sha256": "9fdcecf29b9767c3853200925566f8d4b447c6e64e2b4aa77ac891d459e299e0",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/models/vendor_attention/original/unet_2D.py",
+      "sha256": "76026e667358c060ae1909cd629ca0da8cda9796557eb63b1d568b1c85e71f55",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/models/vendor_attention/original/utils.py",
+      "sha256": "d6b151725939154d5e2eefe7ebd0e399797788c859185938f3284f1805634947",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/models/vendor_utnet/LICENSE",
+      "sha256": "2f24390e92d6e4c011950b79a28ed046083250fbbc31266db1c308e154268133",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/models/vendor_utnet/PROVENANCE.md",
+      "sha256": "2ce42b2660de3e7e887b73854c85ec29ca101d1f4d12918ed792511208eca9f8",
+      "reason": "vendored model provenance"
+    },
+    {
+      "path": "scripts/comparative_study/models/vendor_utnet/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/models/vendor_utnet/compat/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/models/vendor_utnet/compat/conv_trans_utils.py",
+      "sha256": "c312e6347a77091dba2cd613f6c27b3e86e7cf299f375c8795eae561849319b0",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/models/vendor_utnet/compat/unet_utils.py",
+      "sha256": "a98b51cbe7e0a888afc001264f7f87cb87f4e3e24c6b01b6efc270d8aa09993d",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/models/vendor_utnet/compat/utnet.py",
+      "sha256": "9d9ed2cb3e2b91c2376ca3be5247a49502effcde47675d40cc837466393a6535",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/models/vendor_utnet/original/conv_trans_utils.py",
+      "sha256": "c312e6347a77091dba2cd613f6c27b3e86e7cf299f375c8795eae561849319b0",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/models/vendor_utnet/original/unet_utils.py",
+      "sha256": "a98b51cbe7e0a888afc001264f7f87cb87f4e3e24c6b01b6efc270d8aa09993d",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/models/vendor_utnet/original/utnet.py",
+      "sha256": "9d9ed2cb3e2b91c2376ca3be5247a49502effcde47675d40cc837466393a6535",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/render_evidence.py",
+      "sha256": "fe2355d9db5fb83700da57e064c006f3f1f2f5e5bfda6df318c973aa7f504e93",
+      "reason": "explicit source path in scripts/comparative_study/verify_finalize.py"
+    },
+    {
+      "path": "scripts/comparative_study/train.py",
+      "sha256": "e63f4e50556ba6709533c154dd3f890be294cfdf25a5d27b3fd94fb39209ea56",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/verify_counts.py",
+      "sha256": "336ca8f20f5322e2f0355c067858fac24896549723362517408483ab2c0daead",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/verify_determinism.py",
+      "sha256": "841346426d85fbe51b79599ecd036ad697a54c4950510a21a689d6e92001acf1",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/verify_efficiency.py",
+      "sha256": "98d8ff625ea7917895e3c683441a7a1817a3569d0cbd06ea90f4e1ff4e09d8e1",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/verify_finalize.py",
+      "sha256": "0685a1a2faada4fff625f8f4b9c0bd6c4b111de476085f7e4408651a03e18370",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/verify_gpu_native.py",
+      "sha256": "160f9fb3832543c395ab2d8944108db8feef446fa8e90dc82e663178cfa2c0b0",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/verify_reuse.py",
+      "sha256": "fdc3072ac278519005b4d520a1db7048acd283b989b19f3487fcf8e5ca40705a",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/verify_source.py",
+      "sha256": "f68641c2d5162fc6037d4060f177b0efea18cfac6697fd5c17e80622cd6efc2e",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/verify_training.py",
+      "sha256": "585e0554dcb6614b228a3a2a68fefdbc287414f472345bd212b5471dd744d258",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/comparative_study/verify_warmup.py",
+      "sha256": "75509c51bf8c2acfdaf1c05dcaecdb7fa20164d1536208882e583f6067f955fe",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/evaluate_calcification_refinement.py",
+      "sha256": "714494c95d1858a7c1a0228e5bd7848e8c159134a666992da1bd117398b511e0",
+      "reason": "import from scripts/train_calcification_refinement.py"
+    },
+    {
+      "path": "scripts/evaluate_calcification_refinement_v3_union.py",
+      "sha256": "d1993dce3fc5957a8c074e410ab02834d7ab8e275262b55bac95008422aab056",
+      "reason": "import from scripts/improvement_unext_deterministic/evaluate.py"
+    },
+    {
+      "path": "scripts/external_comparative_inbreast/annotations.py",
+      "sha256": "09ab43f39e6a0726bbee611076eedfacad9b14101603bef7cd214fea2eef33f4",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/external_comparative_inbreast/common.py",
+      "sha256": "851382988517a50cddaeb82c255b1f1a50c64c5ebad2832fa28e66bbc5a43111",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/external_comparative_inbreast/evaluate.py",
+      "sha256": "a0ddb7cbd49c4bc18a262d0e16270d6315f19410ecd8361b8e3845d22bc80d3a",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/external_comparative_inbreast/infer.py",
+      "sha256": "bfc137abacb0cdfd022b38cbb3c98aa090a70173aa4de1603431f0d024b37694",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/external_comparative_inbreast/prepare.py",
+      "sha256": "e75390492bc783f30d1c0d82aaf93867a8dfff3f36acab88ad8ac32dd9333efa",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/external_comparative_inbreast/test_evaluation.py",
+      "sha256": "655c3621e629cad82e9378e2a11a6f7ea23eaa3840c7ecc2498f1aee7385445d",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/external_comparative_inbreast/test_inference.py",
+      "sha256": "4b246d4ec490ee7767d371b6c7bdc2293a34ca206671dfd1a6e95ca74d332bae",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/external_comparative_inbreast/verify_inference.py",
+      "sha256": "030c1830b374bc9c9d42b3ab48af15baefd78e7ebdc6bd261fd9584232e1c148",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/external_current_models/README.md",
+      "sha256": "dca67a74e01c5eb7a05c813aab7154a98c8107d52a919531082be93b3286e8c3",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/external_current_models/common.py",
+      "sha256": "c52edf16b5c9b9a99e61e9e7f4864248c4aa9c25ad8e75869aaad8c73b905ba9",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/external_current_models/evaluate.py",
+      "sha256": "e06e8ee880ece11ff9e0e4a902e30df2fc6337166b6e2a4fb597b180982bfd9d",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/external_current_models/infer.py",
+      "sha256": "0deb113ecdd5e1a5d365c63f961d7c55f13853f2579ed46acf28ed9d93f019d0",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/external_current_models/run_queue.py",
+      "sha256": "c7dccfa793d1a876d04e6952327248b81b9fe2f244e393f480a570f7a7af6135",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/external_current_models/test_protocol.py",
+      "sha256": "c115e949052b745ae8f0dd45465d4cc24c289ef2fb048ecf4aac2c8150152537",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/external_v3/annotations.py",
+      "sha256": "e21ad30a004fdbc526cc5172959a042f6b000926f45334ee38f3730c444c7fa3",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/external_v3/common.py",
+      "sha256": "fa10944001f69c892308826d3c96aba8de0e9e3e5eac1fb44237a6afd8701096",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/external_v3/evaluate.py",
+      "sha256": "81f5ed8d861982618a97daa014f366736a14061f8f9aa4a9cc472ca452adecdf",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/external_v3/infer.py",
+      "sha256": "d27d6f668c14e6596bf5a74c3437641a2da5b0e1493e7821246bc82d41ed6f33",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/external_v3/prepare.py",
+      "sha256": "9562e102d321bf175bdee758aaa214bb429f99b92d98096283f03ec232ccc10c",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/external_v3/run_evaluation_when_ready.py",
+      "sha256": "756038551a1cf1c5834f3943d5360f221910ec67d0325b973a8702b2934332b2",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/external_v3/test_evaluation.py",
+      "sha256": "b4d987802e4b45476c930fe593673c195c83b2662c81e292ae2d3647d34f2b83",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/external_v3/test_inference.py",
+      "sha256": "fb1be4dc83608b2b95fbec7572ad91ba7aef5c4ac3c914e6fc159c09caa8ffe7",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/external_v3/verify_aggregates.py",
+      "sha256": "b3dfabc1fd802d3765fb2faca2294ecc9eec449b10b101c4badb2025c4f8acea",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/external_v3/verify_partial.py",
+      "sha256": "88eb9c6c38e6668fcafdef649a24182756c2d4f9d87088aee0a3b4c2ea0d1775",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/extract_calcification_features.py",
+      "sha256": "f713477687a32a63bbff56e72b30eecbf596db1a356a3e1f734a0eae857261f8",
+      "reason": "import from scripts/calcification_gate_sam_common.py"
+    },
+    {
+      "path": "scripts/improvement_unext_deterministic/common.py",
+      "sha256": "fe8bfbf0ee56a68133c2319c47c196b3c75f62cd7e8d3a740f1b58b4ad3377d5",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/improvement_unext_deterministic/evaluate.py",
+      "sha256": "ad38032b70df2f975c8880b3dbc5f6de2f1da1e4706fc4362f4f37a68c204a37",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/improvement_unext_deterministic/miner.py",
+      "sha256": "8331981852178e671c326af9146feb76348d37deddce2214f31a5a8022ec058a",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/improvement_unext_deterministic/model.py",
+      "sha256": "8dc77bdfd139e4811daca90416ef7076933e8ea3085a6f4e5b3c5b170f971d11",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/improvement_unext_deterministic/test_model.py",
+      "sha256": "7c36005097f9f9eea8df6c86436582ae1f2372658ef8c553ec8a518df71e71c9",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/improvement_unext_deterministic/train.py",
+      "sha256": "e84e891dffc44ea2496d28ff63edced7354847c46ad0db04d1d1f585b9a99edf",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/improvement_unext_deterministic/vendor_unext/LICENSE",
+      "sha256": "937c2c490f55b11c20af518ba4c094506041125553b7b42f290c495ba07cff74",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/improvement_unext_deterministic/vendor_unext/PROVENANCE.md",
+      "sha256": "0e6b8f4c5378317fadacc5f64deff0f3fc1216b36705dd1ad110f2ab2f7216e5",
+      "reason": "vendored model provenance"
+    },
+    {
+      "path": "scripts/improvement_unext_deterministic/vendor_unext/archs.py",
+      "sha256": "7486a70d6398484da496727f49f7b0d0c14aac0b49bda0cd34b4f877737831ba",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/improvement_unext_deterministic/verify_counts.py",
+      "sha256": "336ca8f20f5322e2f0355c067858fac24896549723362517408483ab2c0daead",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/improvement_unext_deterministic/verify_determinism.py",
+      "sha256": "2d801761aaef7250391fccb6c775a4e75df0d8ca2f8464af44c02e78ff513922",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/improvement_unext_deterministic/verify_gpu_native.py",
+      "sha256": "99272cd592e282aae107699e8262d5e2c60c0031eba72bc3b973f899d1122075",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/improvement_unext_deterministic/verify_model_source.py",
+      "sha256": "31bf9e27b9f63fd5eadd70c67d06bb354281785715b87d0ef99dc8ad2f84cdc2",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/improvement_unext_deterministic/verify_training.py",
+      "sha256": "2b4b3f44925029a4fe189efb5509669125c4521be8c0d79b5dcf6077eca207e6",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/improvement_unext_deterministic/verify_warmup.py",
+      "sha256": "ff0522daa5e05d3367701d0e48af5b1245049b788860e189a58f50ee35c01cde",
+      "reason": "study workflow"
+    },
+    {
+      "path": "scripts/prepare_calcification_gate_data.py",
+      "sha256": "7970ec8e31c1dc9776a5d63d43a45195be6f985a89f7ce19c859dcca1a2507f3",
+      "reason": "explicit source path in scripts/extract_calcification_features.py"
+    },
+    {
+      "path": "scripts/prepare_calcification_gate_sam.py",
+      "sha256": "cf721e88dc27b7c1a19aa5cdea5e1e21f9dc78942b3f94552dc38542df245829",
+      "reason": "import from scripts/run_calcification_gate_sam.py"
+    },
+    {
+      "path": "scripts/prepare_calcification_refinement.py",
+      "sha256": "c841b984c28e760b2d88b1f50749c36a72b4489c6cd1859fb83947c57108b6af",
+      "reason": "native preprocessing"
+    },
+    {
+      "path": "scripts/prepare_calcification_refinement_baselines.py",
+      "sha256": "306410247dfbd186cad84b3344dff4009af71e1fc79469da13bfc74aea462f92",
+      "reason": "native preprocessing"
+    },
+    {
+      "path": "scripts/prepare_retinanet_roi.py",
+      "sha256": "4fe8861152cbcc5ab852cc3cd35227e325e76133c50ccf1d8d417e0730e4f648",
+      "reason": "import from scripts/external_comparative_inbreast/infer.py"
+    },
+    {
+      "path": "scripts/run_calcification_gate_finetune.py",
+      "sha256": "a86b0a336f6e0ff9f6c416d4fd48d9d72928ac237da0fd09e624d456d39a7bc4",
+      "reason": "explicit source path in scripts/train_calcification_gate_finetune.py"
+    },
+    {
+      "path": "scripts/run_calcification_gate_sam.py",
+      "sha256": "e61affd1bddb473ef772fcf3b9212020479b31b4b59e5240db7a2e964184642a",
+      "reason": "import from scripts/prepare_calcification_refinement_baselines.py"
+    },
+    {
+      "path": "scripts/test_calcification_refinement.py",
+      "sha256": "20a386d21d4349e9110ccb9872e95acb3eed91f1ce0c42a1094fd21247fc1ce1",
+      "reason": "explicit source path in scripts/train_calcification_refinement.py"
+    },
+    {
+      "path": "scripts/test_calcification_refinement_evaluation.py",
+      "sha256": "4a40dec6cd82c5d4153e1cbee18d706034ceb2d16ae099d0637d3595dd95553d",
+      "reason": "explicit source path in scripts/train_calcification_refinement.py"
+    },
+    {
+      "path": "scripts/test_calcification_refinement_v2.py",
+      "sha256": "db4c791c12202c3da2a19ddaeea505eaaec1e0f3f88347a9ea2b8c66d44cfc17",
+      "reason": "explicit source path in scripts/train_calcification_refinement_v2.py"
+    },
+    {
+      "path": "scripts/test_calcification_refinement_v2_runner.py",
+      "sha256": "1af1c584fb67b1437204054c7446478e47a6eba8670282236b5ec49c8fdd54ea",
+      "reason": "explicit source path in scripts/train_calcification_refinement_v2.py"
+    },
+    {
+      "path": "scripts/test_calcification_refinement_v3_union.py",
+      "sha256": "da6042bb6f1379a6620180af05e61b5ba587be0dd1100a656bbb28fa35d8da84",
+      "reason": "explicit source path in scripts/evaluate_calcification_refinement_v3_union.py"
+    },
+    {
+      "path": "scripts/train_calcification_gate.py",
+      "sha256": "592853afbcb6001e34cf679bd68591885a2899ead609cc0af7888ceedf53d722",
+      "reason": "import from scripts/train_calcification_gate_finetune.py"
+    },
+    {
+      "path": "scripts/train_calcification_gate_finetune.py",
+      "sha256": "2a4add6650457af546bafca0c9346d3181c1e9b6255f80a6d1133f7f4321ae95",
+      "reason": "import from scripts/calcification_gate_sam_common.py"
+    },
+    {
+      "path": "scripts/train_calcification_refinement.py",
+      "sha256": "84faedc8e42c04833acc8e11d484f60449dcc450d7000a01cf63b2b23d08598f",
+      "reason": "explicit source path in scripts/improvement_unext_deterministic/common.py"
+    },
+    {
+      "path": "scripts/train_calcification_refinement_v2.py",
+      "sha256": "aa14d6eb8f4d4d6a93bfc84e8ad1e04d1be827679008b406b148f144d174a301",
+      "reason": "import from scripts/comparative_study/verify_training.py"
+    },
+    {
+      "path": "scripts/train_retinanet_roi.py",
+      "sha256": "18d5b0fec00befec360252119e665e6916ccc26a59a165d1055bee206cbd28de",
+      "reason": "import from scripts/calcification_gate_sam_common.py"
+    },
+    {
+      "path": "scripts/v3_ideas/baseline.py",
+      "sha256": "e9bef5b2bd264a1fb217cf41e0717cdcd5715cc89dc3a86b7cafcafb7f976dc0",
+      "reason": "import from scripts/improvement_unext_deterministic/common.py"
+    },
+    {
+      "path": "scripts/v3_ideas/evaluate.py",
+      "sha256": "b4a707ea0db0be0995bd724ada687486e31eed8a212347f9a096b6b55488e4a7",
+      "reason": "import from scripts/comparative_held32/test_held32.py"
+    },
+    {
+      "path": "scripts/v3_ideas/policies.py",
+      "sha256": "d21e910dae75542a849af72ade739f1069b4269299bc133637379e47b9f1b9b7",
+      "reason": "import from scripts/v3_ideas/evaluate.py"
+    },
+    {
+      "path": "src/mammo_baselines/__init__.py",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "reason": "study workflow"
+    },
+    {
+      "path": "src/mammo_baselines/metrics.py",
+      "sha256": "2a122930160f833571eee972e96c1fa419eff22825ad6e9508343c37d1dc6f4e",
+      "reason": "study workflow"
+    },
+    {
+      "path": "src/mammo_baselines/runtime.py",
+      "sha256": "7147050af2b2ba0a659e7cb5f01e56b85b5a24c047e0c44274d416f96c009852",
+      "reason": "study workflow"
+    }
+  ]
+}
