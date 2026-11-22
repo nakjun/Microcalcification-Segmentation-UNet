@@ -1,0 +1,3548 @@
+{
+  "version": "csaw312-v1",
+  "status": "implementation_preflight_pending",
+  "data_signature": "707ee17756761f5f6fb77dfd7774cc80fcbfe2b19c3ec4b3e24d44f56645b916",
+  "data_root": "runs/csaw312_rerun_20261105/data",
+  "output_root": "runs/CSAW312_Rerun_20261105",
+  "session": "csaw312_rerun_20261105",
+  "legacy_manifest_sha256": "4232ea313eaf1cee521339068f789da197f35882e56f80abb310c81191b5a775",
+  "seed_scope": {
+    "full_ablation": [
+      42
+    ],
+    "main_models": [
+      42,
+      43,
+      44
+    ]
+  },
+  "training": {
+    "patches_per_epoch": 4096,
+    "batch_backbone": 16,
+    "batch_deepmica": 16,
+    "batch_yolo": 1,
+    "base_epochs": 48,
+    "max_epochs": 96,
+    "min_epochs": 32,
+    "val_every": 4,
+    "patience_epochs": 16,
+    "min_delta": 0.001,
+    "cosine_horizon": 96,
+    "final_lr_multiplier": 0.01,
+    "mining_epochs": [
+      3,
+      7,
+      11,
+      19,
+      27,
+      35,
+      43,
+      51,
+      59,
+      67,
+      75,
+      83,
+      91
+    ]
+  },
+  "selection": {
+    "segmentation": "positive_macro_dice",
+    "ties": [
+      "negative_fp_per_image_ascending",
+      "epoch_ascending"
+    ],
+    "detector": "AP50:95",
+    "threshold": 0.5
+  },
+  "inference": {
+    "patch_size": 256,
+    "stride": 192,
+    "threshold": 0.5,
+    "gate": false,
+    "detector_confidence": 0.25,
+    "detector_nms": 0.45,
+    "detector_max_per_tile": 100,
+    "detector_AP_confidence": 0.001
+  },
+  "sam_checkpoint": "runs/mammo_hypothesis/weights/sam_vit_b.pth",
+  "storage": {
+    "min_free_gib": 20,
+    "minimum_launch_free_gib": 200,
+    "retain": [
+      "best",
+      "last",
+      "epoch16",
+      "selected",
+      "final_refit"
+    ],
+    "sparse_min_probability": 0.01
+  },
+  "configurations": [
+    {
+      "model": "proposed",
+      "variant": "C",
+      "seed": 42
+    },
+    {
+      "model": "proposed",
+      "variant": "L",
+      "seed": 42
+    },
+    {
+      "model": "proposed",
+      "variant": "H",
+      "seed": 42
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 42
+    },
+    {
+      "model": "unext",
+      "variant": "C",
+      "seed": 42
+    },
+    {
+      "model": "unext",
+      "variant": "L",
+      "seed": 42
+    },
+    {
+      "model": "unext",
+      "variant": "H",
+      "seed": 42
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 42
+    },
+    {
+      "model": "unet2d",
+      "variant": "C",
+      "seed": 42
+    },
+    {
+      "model": "unet2d",
+      "variant": "L",
+      "seed": 42
+    },
+    {
+      "model": "unet2d",
+      "variant": "H",
+      "seed": 42
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 42
+    },
+    {
+      "model": "utnet",
+      "variant": "C",
+      "seed": 42
+    },
+    {
+      "model": "utnet",
+      "variant": "L",
+      "seed": 42
+    },
+    {
+      "model": "utnet",
+      "variant": "H",
+      "seed": 42
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 42
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 42
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 42
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 43
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 43
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 43
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 43
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 43
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 43
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 44
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 44
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 44
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 44
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 44
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 44
+    }
+  ],
+  "jobs": [
+    {
+      "model": "proposed",
+      "variant": "C",
+      "seed": 42,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "proposed_C/seed_42/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "C",
+      "seed": 42,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "proposed_C/seed_42/fold_0/refit/segmentation",
+      "depends_on": [
+        "proposed_C/seed_42/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "C",
+      "seed": 42,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "proposed_C/seed_42/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "C",
+      "seed": 42,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "proposed_C/seed_42/fold_1/refit/segmentation",
+      "depends_on": [
+        "proposed_C/seed_42/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "C",
+      "seed": 42,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "proposed_C/seed_42/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "C",
+      "seed": 42,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "proposed_C/seed_42/fold_2/refit/segmentation",
+      "depends_on": [
+        "proposed_C/seed_42/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "L",
+      "seed": 42,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "proposed_L/seed_42/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "L",
+      "seed": 42,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "proposed_L/seed_42/fold_0/refit/segmentation",
+      "depends_on": [
+        "proposed_L/seed_42/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "L",
+      "seed": 42,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "proposed_L/seed_42/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "L",
+      "seed": 42,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "proposed_L/seed_42/fold_1/refit/segmentation",
+      "depends_on": [
+        "proposed_L/seed_42/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "L",
+      "seed": 42,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "proposed_L/seed_42/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "L",
+      "seed": 42,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "proposed_L/seed_42/fold_2/refit/segmentation",
+      "depends_on": [
+        "proposed_L/seed_42/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "H",
+      "seed": 42,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "proposed_H/seed_42/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "H",
+      "seed": 42,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "proposed_H/seed_42/fold_0/refit/segmentation",
+      "depends_on": [
+        "proposed_H/seed_42/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "H",
+      "seed": 42,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "proposed_H/seed_42/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "H",
+      "seed": 42,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "proposed_H/seed_42/fold_1/refit/segmentation",
+      "depends_on": [
+        "proposed_H/seed_42/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "H",
+      "seed": 42,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "proposed_H/seed_42/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "H",
+      "seed": 42,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "proposed_H/seed_42/fold_2/refit/segmentation",
+      "depends_on": [
+        "proposed_H/seed_42/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "proposed_LH/seed_42/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "proposed_LH/seed_42/fold_0/refit/segmentation",
+      "depends_on": [
+        "proposed_LH/seed_42/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "proposed_LH/seed_42/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "proposed_LH/seed_42/fold_1/refit/segmentation",
+      "depends_on": [
+        "proposed_LH/seed_42/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "proposed_LH/seed_42/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "proposed_LH/seed_42/fold_2/refit/segmentation",
+      "depends_on": [
+        "proposed_LH/seed_42/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "C",
+      "seed": 42,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unext_C/seed_42/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "C",
+      "seed": 42,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unext_C/seed_42/fold_0/refit/segmentation",
+      "depends_on": [
+        "unext_C/seed_42/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "C",
+      "seed": 42,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unext_C/seed_42/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "C",
+      "seed": 42,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unext_C/seed_42/fold_1/refit/segmentation",
+      "depends_on": [
+        "unext_C/seed_42/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "C",
+      "seed": 42,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unext_C/seed_42/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "C",
+      "seed": 42,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unext_C/seed_42/fold_2/refit/segmentation",
+      "depends_on": [
+        "unext_C/seed_42/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "L",
+      "seed": 42,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unext_L/seed_42/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "L",
+      "seed": 42,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unext_L/seed_42/fold_0/refit/segmentation",
+      "depends_on": [
+        "unext_L/seed_42/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "L",
+      "seed": 42,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unext_L/seed_42/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "L",
+      "seed": 42,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unext_L/seed_42/fold_1/refit/segmentation",
+      "depends_on": [
+        "unext_L/seed_42/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "L",
+      "seed": 42,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unext_L/seed_42/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "L",
+      "seed": 42,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unext_L/seed_42/fold_2/refit/segmentation",
+      "depends_on": [
+        "unext_L/seed_42/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "H",
+      "seed": 42,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unext_H/seed_42/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "H",
+      "seed": 42,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unext_H/seed_42/fold_0/refit/segmentation",
+      "depends_on": [
+        "unext_H/seed_42/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "H",
+      "seed": 42,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unext_H/seed_42/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "H",
+      "seed": 42,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unext_H/seed_42/fold_1/refit/segmentation",
+      "depends_on": [
+        "unext_H/seed_42/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "H",
+      "seed": 42,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unext_H/seed_42/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "H",
+      "seed": 42,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unext_H/seed_42/fold_2/refit/segmentation",
+      "depends_on": [
+        "unext_H/seed_42/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unext_LH/seed_42/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unext_LH/seed_42/fold_0/refit/segmentation",
+      "depends_on": [
+        "unext_LH/seed_42/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unext_LH/seed_42/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unext_LH/seed_42/fold_1/refit/segmentation",
+      "depends_on": [
+        "unext_LH/seed_42/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unext_LH/seed_42/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unext_LH/seed_42/fold_2/refit/segmentation",
+      "depends_on": [
+        "unext_LH/seed_42/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "C",
+      "seed": 42,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unet2d_C/seed_42/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "C",
+      "seed": 42,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unet2d_C/seed_42/fold_0/refit/segmentation",
+      "depends_on": [
+        "unet2d_C/seed_42/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "C",
+      "seed": 42,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unet2d_C/seed_42/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "C",
+      "seed": 42,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unet2d_C/seed_42/fold_1/refit/segmentation",
+      "depends_on": [
+        "unet2d_C/seed_42/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "C",
+      "seed": 42,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unet2d_C/seed_42/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "C",
+      "seed": 42,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unet2d_C/seed_42/fold_2/refit/segmentation",
+      "depends_on": [
+        "unet2d_C/seed_42/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "L",
+      "seed": 42,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unet2d_L/seed_42/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "L",
+      "seed": 42,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unet2d_L/seed_42/fold_0/refit/segmentation",
+      "depends_on": [
+        "unet2d_L/seed_42/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "L",
+      "seed": 42,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unet2d_L/seed_42/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "L",
+      "seed": 42,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unet2d_L/seed_42/fold_1/refit/segmentation",
+      "depends_on": [
+        "unet2d_L/seed_42/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "L",
+      "seed": 42,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unet2d_L/seed_42/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "L",
+      "seed": 42,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unet2d_L/seed_42/fold_2/refit/segmentation",
+      "depends_on": [
+        "unet2d_L/seed_42/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "H",
+      "seed": 42,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unet2d_H/seed_42/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "H",
+      "seed": 42,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unet2d_H/seed_42/fold_0/refit/segmentation",
+      "depends_on": [
+        "unet2d_H/seed_42/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "H",
+      "seed": 42,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unet2d_H/seed_42/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "H",
+      "seed": 42,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unet2d_H/seed_42/fold_1/refit/segmentation",
+      "depends_on": [
+        "unet2d_H/seed_42/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "H",
+      "seed": 42,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unet2d_H/seed_42/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "H",
+      "seed": 42,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unet2d_H/seed_42/fold_2/refit/segmentation",
+      "depends_on": [
+        "unet2d_H/seed_42/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unet2d_LH/seed_42/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unet2d_LH/seed_42/fold_0/refit/segmentation",
+      "depends_on": [
+        "unet2d_LH/seed_42/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unet2d_LH/seed_42/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unet2d_LH/seed_42/fold_1/refit/segmentation",
+      "depends_on": [
+        "unet2d_LH/seed_42/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unet2d_LH/seed_42/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unet2d_LH/seed_42/fold_2/refit/segmentation",
+      "depends_on": [
+        "unet2d_LH/seed_42/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "C",
+      "seed": 42,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "utnet_C/seed_42/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "C",
+      "seed": 42,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "utnet_C/seed_42/fold_0/refit/segmentation",
+      "depends_on": [
+        "utnet_C/seed_42/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "C",
+      "seed": 42,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "utnet_C/seed_42/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "C",
+      "seed": 42,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "utnet_C/seed_42/fold_1/refit/segmentation",
+      "depends_on": [
+        "utnet_C/seed_42/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "C",
+      "seed": 42,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "utnet_C/seed_42/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "C",
+      "seed": 42,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "utnet_C/seed_42/fold_2/refit/segmentation",
+      "depends_on": [
+        "utnet_C/seed_42/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "L",
+      "seed": 42,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "utnet_L/seed_42/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "L",
+      "seed": 42,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "utnet_L/seed_42/fold_0/refit/segmentation",
+      "depends_on": [
+        "utnet_L/seed_42/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "L",
+      "seed": 42,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "utnet_L/seed_42/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "L",
+      "seed": 42,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "utnet_L/seed_42/fold_1/refit/segmentation",
+      "depends_on": [
+        "utnet_L/seed_42/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "L",
+      "seed": 42,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "utnet_L/seed_42/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "L",
+      "seed": 42,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "utnet_L/seed_42/fold_2/refit/segmentation",
+      "depends_on": [
+        "utnet_L/seed_42/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "H",
+      "seed": 42,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "utnet_H/seed_42/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "H",
+      "seed": 42,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "utnet_H/seed_42/fold_0/refit/segmentation",
+      "depends_on": [
+        "utnet_H/seed_42/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "H",
+      "seed": 42,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "utnet_H/seed_42/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "H",
+      "seed": 42,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "utnet_H/seed_42/fold_1/refit/segmentation",
+      "depends_on": [
+        "utnet_H/seed_42/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "H",
+      "seed": 42,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "utnet_H/seed_42/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "H",
+      "seed": 42,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "utnet_H/seed_42/fold_2/refit/segmentation",
+      "depends_on": [
+        "utnet_H/seed_42/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "utnet_LH/seed_42/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "utnet_LH/seed_42/fold_0/refit/segmentation",
+      "depends_on": [
+        "utnet_LH/seed_42/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "utnet_LH/seed_42/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "utnet_LH/seed_42/fold_1/refit/segmentation",
+      "depends_on": [
+        "utnet_LH/seed_42/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "utnet_LH/seed_42/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "utnet_LH/seed_42/fold_2/refit/segmentation",
+      "depends_on": [
+        "utnet_LH/seed_42/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 42,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "deepmica_native/seed_42/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 42,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "deepmica_native/seed_42/fold_0/refit/segmentation",
+      "depends_on": [
+        "deepmica_native/seed_42/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 42,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "deepmica_native/seed_42/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 42,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "deepmica_native/seed_42/fold_1/refit/segmentation",
+      "depends_on": [
+        "deepmica_native/seed_42/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 42,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "deepmica_native/seed_42/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 42,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "deepmica_native/seed_42/fold_2/refit/segmentation",
+      "depends_on": [
+        "deepmica_native/seed_42/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 42,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "detector",
+      "job_id": "yolo_native/seed_42/fold_0/selection/detector",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 42,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentor",
+      "job_id": "yolo_native/seed_42/fold_0/selection/segmentor",
+      "depends_on": [
+        "yolo_native/seed_42/fold_0/selection/detector"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 42,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "detector",
+      "job_id": "yolo_native/seed_42/fold_0/refit/detector",
+      "depends_on": [
+        "yolo_native/seed_42/fold_0/selection/detector",
+        "yolo_native/seed_42/fold_0/selection/segmentor"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 42,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentor",
+      "job_id": "yolo_native/seed_42/fold_0/refit/segmentor",
+      "depends_on": [
+        "yolo_native/seed_42/fold_0/selection/detector",
+        "yolo_native/seed_42/fold_0/selection/segmentor",
+        "yolo_native/seed_42/fold_0/refit/detector"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 42,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "detector",
+      "job_id": "yolo_native/seed_42/fold_1/selection/detector",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 42,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentor",
+      "job_id": "yolo_native/seed_42/fold_1/selection/segmentor",
+      "depends_on": [
+        "yolo_native/seed_42/fold_1/selection/detector"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 42,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "detector",
+      "job_id": "yolo_native/seed_42/fold_1/refit/detector",
+      "depends_on": [
+        "yolo_native/seed_42/fold_1/selection/detector",
+        "yolo_native/seed_42/fold_1/selection/segmentor"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 42,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentor",
+      "job_id": "yolo_native/seed_42/fold_1/refit/segmentor",
+      "depends_on": [
+        "yolo_native/seed_42/fold_1/selection/detector",
+        "yolo_native/seed_42/fold_1/selection/segmentor",
+        "yolo_native/seed_42/fold_1/refit/detector"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 42,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "detector",
+      "job_id": "yolo_native/seed_42/fold_2/selection/detector",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 42,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentor",
+      "job_id": "yolo_native/seed_42/fold_2/selection/segmentor",
+      "depends_on": [
+        "yolo_native/seed_42/fold_2/selection/detector"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 42,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "detector",
+      "job_id": "yolo_native/seed_42/fold_2/refit/detector",
+      "depends_on": [
+        "yolo_native/seed_42/fold_2/selection/detector",
+        "yolo_native/seed_42/fold_2/selection/segmentor"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 42,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentor",
+      "job_id": "yolo_native/seed_42/fold_2/refit/segmentor",
+      "depends_on": [
+        "yolo_native/seed_42/fold_2/selection/detector",
+        "yolo_native/seed_42/fold_2/selection/segmentor",
+        "yolo_native/seed_42/fold_2/refit/detector"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "proposed_LH/seed_43/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "proposed_LH/seed_43/fold_0/refit/segmentation",
+      "depends_on": [
+        "proposed_LH/seed_43/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "proposed_LH/seed_43/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "proposed_LH/seed_43/fold_1/refit/segmentation",
+      "depends_on": [
+        "proposed_LH/seed_43/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "proposed_LH/seed_43/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "proposed_LH/seed_43/fold_2/refit/segmentation",
+      "depends_on": [
+        "proposed_LH/seed_43/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unext_LH/seed_43/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unext_LH/seed_43/fold_0/refit/segmentation",
+      "depends_on": [
+        "unext_LH/seed_43/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unext_LH/seed_43/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unext_LH/seed_43/fold_1/refit/segmentation",
+      "depends_on": [
+        "unext_LH/seed_43/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unext_LH/seed_43/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unext_LH/seed_43/fold_2/refit/segmentation",
+      "depends_on": [
+        "unext_LH/seed_43/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unet2d_LH/seed_43/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unet2d_LH/seed_43/fold_0/refit/segmentation",
+      "depends_on": [
+        "unet2d_LH/seed_43/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unet2d_LH/seed_43/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unet2d_LH/seed_43/fold_1/refit/segmentation",
+      "depends_on": [
+        "unet2d_LH/seed_43/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unet2d_LH/seed_43/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unet2d_LH/seed_43/fold_2/refit/segmentation",
+      "depends_on": [
+        "unet2d_LH/seed_43/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "utnet_LH/seed_43/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "utnet_LH/seed_43/fold_0/refit/segmentation",
+      "depends_on": [
+        "utnet_LH/seed_43/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "utnet_LH/seed_43/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "utnet_LH/seed_43/fold_1/refit/segmentation",
+      "depends_on": [
+        "utnet_LH/seed_43/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "utnet_LH/seed_43/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "utnet_LH/seed_43/fold_2/refit/segmentation",
+      "depends_on": [
+        "utnet_LH/seed_43/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 43,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "deepmica_native/seed_43/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 43,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "deepmica_native/seed_43/fold_0/refit/segmentation",
+      "depends_on": [
+        "deepmica_native/seed_43/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 43,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "deepmica_native/seed_43/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 43,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "deepmica_native/seed_43/fold_1/refit/segmentation",
+      "depends_on": [
+        "deepmica_native/seed_43/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 43,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "deepmica_native/seed_43/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 43,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "deepmica_native/seed_43/fold_2/refit/segmentation",
+      "depends_on": [
+        "deepmica_native/seed_43/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 43,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "detector",
+      "job_id": "yolo_native/seed_43/fold_0/selection/detector",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 43,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentor",
+      "job_id": "yolo_native/seed_43/fold_0/selection/segmentor",
+      "depends_on": [
+        "yolo_native/seed_43/fold_0/selection/detector"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 43,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "detector",
+      "job_id": "yolo_native/seed_43/fold_0/refit/detector",
+      "depends_on": [
+        "yolo_native/seed_43/fold_0/selection/detector",
+        "yolo_native/seed_43/fold_0/selection/segmentor"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 43,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentor",
+      "job_id": "yolo_native/seed_43/fold_0/refit/segmentor",
+      "depends_on": [
+        "yolo_native/seed_43/fold_0/selection/detector",
+        "yolo_native/seed_43/fold_0/selection/segmentor",
+        "yolo_native/seed_43/fold_0/refit/detector"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 43,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "detector",
+      "job_id": "yolo_native/seed_43/fold_1/selection/detector",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 43,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentor",
+      "job_id": "yolo_native/seed_43/fold_1/selection/segmentor",
+      "depends_on": [
+        "yolo_native/seed_43/fold_1/selection/detector"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 43,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "detector",
+      "job_id": "yolo_native/seed_43/fold_1/refit/detector",
+      "depends_on": [
+        "yolo_native/seed_43/fold_1/selection/detector",
+        "yolo_native/seed_43/fold_1/selection/segmentor"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 43,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentor",
+      "job_id": "yolo_native/seed_43/fold_1/refit/segmentor",
+      "depends_on": [
+        "yolo_native/seed_43/fold_1/selection/detector",
+        "yolo_native/seed_43/fold_1/selection/segmentor",
+        "yolo_native/seed_43/fold_1/refit/detector"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 43,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "detector",
+      "job_id": "yolo_native/seed_43/fold_2/selection/detector",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 43,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentor",
+      "job_id": "yolo_native/seed_43/fold_2/selection/segmentor",
+      "depends_on": [
+        "yolo_native/seed_43/fold_2/selection/detector"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 43,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "detector",
+      "job_id": "yolo_native/seed_43/fold_2/refit/detector",
+      "depends_on": [
+        "yolo_native/seed_43/fold_2/selection/detector",
+        "yolo_native/seed_43/fold_2/selection/segmentor"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 43,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentor",
+      "job_id": "yolo_native/seed_43/fold_2/refit/segmentor",
+      "depends_on": [
+        "yolo_native/seed_43/fold_2/selection/detector",
+        "yolo_native/seed_43/fold_2/selection/segmentor",
+        "yolo_native/seed_43/fold_2/refit/detector"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "proposed_LH/seed_44/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "proposed_LH/seed_44/fold_0/refit/segmentation",
+      "depends_on": [
+        "proposed_LH/seed_44/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "proposed_LH/seed_44/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "proposed_LH/seed_44/fold_1/refit/segmentation",
+      "depends_on": [
+        "proposed_LH/seed_44/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "proposed_LH/seed_44/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "proposed_LH/seed_44/fold_2/refit/segmentation",
+      "depends_on": [
+        "proposed_LH/seed_44/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unext_LH/seed_44/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unext_LH/seed_44/fold_0/refit/segmentation",
+      "depends_on": [
+        "unext_LH/seed_44/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unext_LH/seed_44/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unext_LH/seed_44/fold_1/refit/segmentation",
+      "depends_on": [
+        "unext_LH/seed_44/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unext_LH/seed_44/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unext_LH/seed_44/fold_2/refit/segmentation",
+      "depends_on": [
+        "unext_LH/seed_44/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unet2d_LH/seed_44/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unet2d_LH/seed_44/fold_0/refit/segmentation",
+      "depends_on": [
+        "unet2d_LH/seed_44/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unet2d_LH/seed_44/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unet2d_LH/seed_44/fold_1/refit/segmentation",
+      "depends_on": [
+        "unet2d_LH/seed_44/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "unet2d_LH/seed_44/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "unet2d_LH/seed_44/fold_2/refit/segmentation",
+      "depends_on": [
+        "unet2d_LH/seed_44/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "utnet_LH/seed_44/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "utnet_LH/seed_44/fold_0/refit/segmentation",
+      "depends_on": [
+        "utnet_LH/seed_44/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "utnet_LH/seed_44/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "utnet_LH/seed_44/fold_1/refit/segmentation",
+      "depends_on": [
+        "utnet_LH/seed_44/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "utnet_LH/seed_44/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "utnet_LH/seed_44/fold_2/refit/segmentation",
+      "depends_on": [
+        "utnet_LH/seed_44/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 44,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "deepmica_native/seed_44/fold_0/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 44,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "deepmica_native/seed_44/fold_0/refit/segmentation",
+      "depends_on": [
+        "deepmica_native/seed_44/fold_0/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 44,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "deepmica_native/seed_44/fold_1/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 44,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "deepmica_native/seed_44/fold_1/refit/segmentation",
+      "depends_on": [
+        "deepmica_native/seed_44/fold_1/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 44,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentation",
+      "job_id": "deepmica_native/seed_44/fold_2/selection/segmentation",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 44,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentation",
+      "job_id": "deepmica_native/seed_44/fold_2/refit/segmentation",
+      "depends_on": [
+        "deepmica_native/seed_44/fold_2/selection/segmentation"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 44,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "detector",
+      "job_id": "yolo_native/seed_44/fold_0/selection/detector",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 44,
+      "fold": 0,
+      "phase": "selection",
+      "stage": "segmentor",
+      "job_id": "yolo_native/seed_44/fold_0/selection/segmentor",
+      "depends_on": [
+        "yolo_native/seed_44/fold_0/selection/detector"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 44,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "detector",
+      "job_id": "yolo_native/seed_44/fold_0/refit/detector",
+      "depends_on": [
+        "yolo_native/seed_44/fold_0/selection/detector",
+        "yolo_native/seed_44/fold_0/selection/segmentor"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 44,
+      "fold": 0,
+      "phase": "refit",
+      "stage": "segmentor",
+      "job_id": "yolo_native/seed_44/fold_0/refit/segmentor",
+      "depends_on": [
+        "yolo_native/seed_44/fold_0/selection/detector",
+        "yolo_native/seed_44/fold_0/selection/segmentor",
+        "yolo_native/seed_44/fold_0/refit/detector"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 44,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "detector",
+      "job_id": "yolo_native/seed_44/fold_1/selection/detector",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 44,
+      "fold": 1,
+      "phase": "selection",
+      "stage": "segmentor",
+      "job_id": "yolo_native/seed_44/fold_1/selection/segmentor",
+      "depends_on": [
+        "yolo_native/seed_44/fold_1/selection/detector"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 44,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "detector",
+      "job_id": "yolo_native/seed_44/fold_1/refit/detector",
+      "depends_on": [
+        "yolo_native/seed_44/fold_1/selection/detector",
+        "yolo_native/seed_44/fold_1/selection/segmentor"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 44,
+      "fold": 1,
+      "phase": "refit",
+      "stage": "segmentor",
+      "job_id": "yolo_native/seed_44/fold_1/refit/segmentor",
+      "depends_on": [
+        "yolo_native/seed_44/fold_1/selection/detector",
+        "yolo_native/seed_44/fold_1/selection/segmentor",
+        "yolo_native/seed_44/fold_1/refit/detector"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 44,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "detector",
+      "job_id": "yolo_native/seed_44/fold_2/selection/detector",
+      "depends_on": [],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 44,
+      "fold": 2,
+      "phase": "selection",
+      "stage": "segmentor",
+      "job_id": "yolo_native/seed_44/fold_2/selection/segmentor",
+      "depends_on": [
+        "yolo_native/seed_44/fold_2/selection/detector"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 44,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "detector",
+      "job_id": "yolo_native/seed_44/fold_2/refit/detector",
+      "depends_on": [
+        "yolo_native/seed_44/fold_2/selection/detector",
+        "yolo_native/seed_44/fold_2/selection/segmentor"
+      ],
+      "status": "planned"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 44,
+      "fold": 2,
+      "phase": "refit",
+      "stage": "segmentor",
+      "job_id": "yolo_native/seed_44/fold_2/refit/segmentor",
+      "depends_on": [
+        "yolo_native/seed_44/fold_2/selection/detector",
+        "yolo_native/seed_44/fold_2/selection/segmentor",
+        "yolo_native/seed_44/fold_2/refit/detector"
+      ],
+      "status": "planned"
+    }
+  ],
+  "external_jobs": [
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 0,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 0,
+      "dataset": "cbis"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 1,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 1,
+      "dataset": "cbis"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 2,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 2,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 0,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 0,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 1,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 1,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 2,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 2,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unet2d",
+      "variant": "C",
+      "seed": 42,
+      "fold": 0,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unet2d",
+      "variant": "C",
+      "seed": 42,
+      "fold": 0,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unet2d",
+      "variant": "C",
+      "seed": 42,
+      "fold": 1,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unet2d",
+      "variant": "C",
+      "seed": 42,
+      "fold": 1,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unet2d",
+      "variant": "C",
+      "seed": 42,
+      "fold": 2,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unet2d",
+      "variant": "C",
+      "seed": 42,
+      "fold": 2,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unet2d",
+      "variant": "L",
+      "seed": 42,
+      "fold": 0,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unet2d",
+      "variant": "L",
+      "seed": 42,
+      "fold": 0,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unet2d",
+      "variant": "L",
+      "seed": 42,
+      "fold": 1,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unet2d",
+      "variant": "L",
+      "seed": 42,
+      "fold": 1,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unet2d",
+      "variant": "L",
+      "seed": 42,
+      "fold": 2,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unet2d",
+      "variant": "L",
+      "seed": 42,
+      "fold": 2,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unet2d",
+      "variant": "H",
+      "seed": 42,
+      "fold": 0,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unet2d",
+      "variant": "H",
+      "seed": 42,
+      "fold": 0,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unet2d",
+      "variant": "H",
+      "seed": 42,
+      "fold": 1,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unet2d",
+      "variant": "H",
+      "seed": 42,
+      "fold": 1,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unet2d",
+      "variant": "H",
+      "seed": 42,
+      "fold": 2,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unet2d",
+      "variant": "H",
+      "seed": 42,
+      "fold": 2,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 0,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 0,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 1,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 1,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 2,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 2,
+      "dataset": "cbis"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 0,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 0,
+      "dataset": "cbis"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 1,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 1,
+      "dataset": "cbis"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 2,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 42,
+      "fold": 2,
+      "dataset": "cbis"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 42,
+      "fold": 0,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 42,
+      "fold": 0,
+      "dataset": "cbis"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 42,
+      "fold": 1,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 42,
+      "fold": 1,
+      "dataset": "cbis"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 42,
+      "fold": 2,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 42,
+      "fold": 2,
+      "dataset": "cbis"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 42,
+      "fold": 0,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 42,
+      "fold": 0,
+      "dataset": "cbis"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 42,
+      "fold": 1,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 42,
+      "fold": 1,
+      "dataset": "cbis"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 42,
+      "fold": 2,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 42,
+      "fold": 2,
+      "dataset": "cbis"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 0,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 0,
+      "dataset": "cbis"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 1,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 1,
+      "dataset": "cbis"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 2,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 2,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 0,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 0,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 1,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 1,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 2,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 2,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 0,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 0,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 1,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 1,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 2,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 2,
+      "dataset": "cbis"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 0,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 0,
+      "dataset": "cbis"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 1,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 1,
+      "dataset": "cbis"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 2,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 43,
+      "fold": 2,
+      "dataset": "cbis"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 43,
+      "fold": 0,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 43,
+      "fold": 0,
+      "dataset": "cbis"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 43,
+      "fold": 1,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 43,
+      "fold": 1,
+      "dataset": "cbis"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 43,
+      "fold": 2,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 43,
+      "fold": 2,
+      "dataset": "cbis"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 43,
+      "fold": 0,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 43,
+      "fold": 0,
+      "dataset": "cbis"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 43,
+      "fold": 1,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 43,
+      "fold": 1,
+      "dataset": "cbis"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 43,
+      "fold": 2,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 43,
+      "fold": 2,
+      "dataset": "cbis"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 0,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 0,
+      "dataset": "cbis"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 1,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 1,
+      "dataset": "cbis"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 2,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "proposed",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 2,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 0,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 0,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 1,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 1,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 2,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unext",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 2,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 0,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 0,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 1,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 1,
+      "dataset": "cbis"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 2,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "unet2d",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 2,
+      "dataset": "cbis"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 0,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 0,
+      "dataset": "cbis"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 1,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 1,
+      "dataset": "cbis"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 2,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "utnet",
+      "variant": "LH",
+      "seed": 44,
+      "fold": 2,
+      "dataset": "cbis"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 44,
+      "fold": 0,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 44,
+      "fold": 0,
+      "dataset": "cbis"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 44,
+      "fold": 1,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 44,
+      "fold": 1,
+      "dataset": "cbis"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 44,
+      "fold": 2,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "deepmica",
+      "variant": "native",
+      "seed": 44,
+      "fold": 2,
+      "dataset": "cbis"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 44,
+      "fold": 0,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 44,
+      "fold": 0,
+      "dataset": "cbis"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 44,
+      "fold": 1,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 44,
+      "fold": 1,
+      "dataset": "cbis"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 44,
+      "fold": 2,
+      "dataset": "inbreast"
+    },
+    {
+      "model": "yolo",
+      "variant": "native",
+      "seed": 44,
+      "fold": 2,
+      "dataset": "cbis"
+    }
+  ],
+  "counts": {
+    "training_stages": 198,
+    "final_pipelines": 90,
+    "external_cohorts": 126
+  },
+  "data_counts": {
+    "development": 241,
+    "test": 71
+  }
+}

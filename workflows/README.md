@@ -1,5 +1,7 @@
 # Data preparation and original training protocol
 
+These shell commands belong to the earlier study split. See the [manuscript reproduction guide](../paper_results/README.md) for the final training and evaluation.
+
 This directory provides scripts only. Data, protocol snapshots, weights, and results are not included in Git. No downloads, training, or inference were performed when these scripts were added.
 
 ## 1. Obtain the data

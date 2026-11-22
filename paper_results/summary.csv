@@ -1,0 +1,139 @@
+model,condition,seed,cohort,metric,mean,sample_sd
+PatchUNet,C,42,csaw_test,positive_macro_dice,0.467,0.037
+PatchUNet,C,42,csaw_test,positive_macro_iou,0.331,0.033
+PatchUNet,C,42,csaw_test,pixel_recall,0.682,0.066
+PatchUNet,C,42,csaw_test,negative_fp_per_image,491.321,358.816
+PatchUNet,C,42,csaw_test,negative_fp_image_fraction,1.000,0.000
+PatchUNet,L,42,csaw_test,positive_macro_dice,0.427,0.069
+PatchUNet,L,42,csaw_test,positive_macro_iou,0.296,0.056
+PatchUNet,L,42,csaw_test,pixel_recall,0.712,0.028
+PatchUNet,L,42,csaw_test,negative_fp_per_image,819.702,746.203
+PatchUNet,L,42,csaw_test,negative_fp_image_fraction,1.000,0.000
+PatchUNet,H,42,csaw_test,positive_macro_dice,0.455,0.011
+PatchUNet,H,42,csaw_test,positive_macro_iou,0.318,0.010
+PatchUNet,H,42,csaw_test,pixel_recall,0.640,0.059
+PatchUNet,H,42,csaw_test,negative_fp_per_image,422.690,216.393
+PatchUNet,H,42,csaw_test,negative_fp_image_fraction,1.000,0.000
+PatchUNet,LH,42,csaw_test,positive_macro_dice,0.453,0.065
+PatchUNet,LH,42,csaw_test,positive_macro_iou,0.317,0.056
+PatchUNet,LH,42,csaw_test,pixel_recall,0.680,0.034
+PatchUNet,LH,42,csaw_test,negative_fp_per_image,554.107,371.010
+PatchUNet,LH,42,csaw_test,negative_fp_image_fraction,1.000,0.000
+PatchUNet,LH,42,inbreast,point_exact_hit_rate,0.323,0.085
+PatchUNet,LH,42,inbreast,point_within1_hit_rate,0.371,0.101
+PatchUNet,LH,42,inbreast,partial_contour_macro_Dice,0.239,0.164
+PatchUNet,LH,42,inbreast,partial_contour_macro_IoU,0.166,0.127
+PatchUNet,LH,42,inbreast,mean_predicted_pixels,9462.077,7764.521
+PatchUNet,LH,42,cbis_test,ROI_any_overlap_rate,0.931,0.038
+PatchUNet,LH,42,cbis_test,ROI_macro_coverage,0.025,0.007
+PatchUNet,LH,42,cbis_test,mean_predicted_pixels,27224.352,24714.977
+UNeXt,C,42,csaw_test,positive_macro_dice,0.470,0.051
+UNeXt,C,42,csaw_test,positive_macro_iou,0.334,0.044
+UNeXt,C,42,csaw_test,pixel_recall,0.650,0.072
+UNeXt,C,42,csaw_test,negative_fp_per_image,440.238,333.502
+UNeXt,C,42,csaw_test,negative_fp_image_fraction,0.976,0.041
+UNeXt,L,42,csaw_test,positive_macro_dice,0.445,0.017
+UNeXt,L,42,csaw_test,positive_macro_iou,0.310,0.011
+UNeXt,L,42,csaw_test,pixel_recall,0.714,0.048
+UNeXt,L,42,csaw_test,negative_fp_per_image,439.714,12.076
+UNeXt,L,42,csaw_test,negative_fp_image_fraction,1.000,0.000
+UNeXt,H,42,csaw_test,positive_macro_dice,0.511,0.011
+UNeXt,H,42,csaw_test,positive_macro_iou,0.367,0.011
+UNeXt,H,42,csaw_test,pixel_recall,0.604,0.059
+UNeXt,H,42,csaw_test,negative_fp_per_image,119.762,15.380
+UNeXt,H,42,csaw_test,negative_fp_image_fraction,0.976,0.021
+UNeXt,LH,42,csaw_test,positive_macro_dice,0.490,0.020
+UNeXt,LH,42,csaw_test,positive_macro_iou,0.349,0.018
+UNeXt,LH,42,csaw_test,pixel_recall,0.672,0.067
+UNeXt,LH,42,csaw_test,negative_fp_per_image,211.214,123.341
+UNeXt,LH,42,csaw_test,negative_fp_image_fraction,1.000,0.000
+UNeXt,LH,42,inbreast,point_exact_hit_rate,0.193,0.113
+UNeXt,LH,42,inbreast,point_within1_hit_rate,0.220,0.119
+UNeXt,LH,42,inbreast,partial_contour_macro_Dice,0.395,0.123
+UNeXt,LH,42,inbreast,partial_contour_macro_IoU,0.293,0.101
+UNeXt,LH,42,inbreast,mean_predicted_pixels,1134.028,917.759
+UNeXt,LH,42,cbis_test,ROI_any_overlap_rate,0.412,0.179
+UNeXt,LH,42,cbis_test,ROI_macro_coverage,0.006,0.005
+UNeXt,LH,42,cbis_test,mean_predicted_pixels,953.374,643.041
+U-Net 2D,C,42,csaw_test,positive_macro_dice,0.473,0.008
+U-Net 2D,C,42,csaw_test,positive_macro_iou,0.334,0.011
+U-Net 2D,C,42,csaw_test,pixel_recall,0.655,0.037
+U-Net 2D,C,42,csaw_test,negative_fp_per_image,518.548,179.950
+U-Net 2D,C,42,csaw_test,negative_fp_image_fraction,0.988,0.021
+U-Net 2D,L,42,csaw_test,positive_macro_dice,0.487,0.024
+U-Net 2D,L,42,csaw_test,positive_macro_iou,0.346,0.021
+U-Net 2D,L,42,csaw_test,pixel_recall,0.637,0.038
+U-Net 2D,L,42,csaw_test,negative_fp_per_image,282.690,45.183
+U-Net 2D,L,42,csaw_test,negative_fp_image_fraction,0.988,0.021
+U-Net 2D,H,42,csaw_test,positive_macro_dice,0.504,0.013
+U-Net 2D,H,42,csaw_test,positive_macro_iou,0.361,0.012
+U-Net 2D,H,42,csaw_test,pixel_recall,0.589,0.053
+U-Net 2D,H,42,csaw_test,negative_fp_per_image,131.774,38.770
+U-Net 2D,H,42,csaw_test,negative_fp_image_fraction,0.869,0.090
+U-Net 2D,LH,42,csaw_test,positive_macro_dice,0.431,0.085
+U-Net 2D,LH,42,csaw_test,positive_macro_iou,0.298,0.071
+U-Net 2D,LH,42,csaw_test,pixel_recall,0.681,0.016
+U-Net 2D,LH,42,csaw_test,negative_fp_per_image,1025.143,990.733
+U-Net 2D,LH,42,csaw_test,negative_fp_image_fraction,1.000,0.000
+U-Net 2D,LH,42,inbreast,point_exact_hit_rate,0.274,0.092
+U-Net 2D,LH,42,inbreast,point_within1_hit_rate,0.310,0.108
+U-Net 2D,LH,42,inbreast,partial_contour_macro_Dice,0.402,0.028
+U-Net 2D,LH,42,inbreast,partial_contour_macro_IoU,0.296,0.030
+U-Net 2D,LH,42,inbreast,mean_predicted_pixels,2775.579,1582.462
+U-Net 2D,LH,42,cbis_test,ROI_any_overlap_rate,0.502,0.149
+U-Net 2D,LH,42,cbis_test,ROI_macro_coverage,0.008,0.005
+U-Net 2D,LH,42,cbis_test,mean_predicted_pixels,4282.420,3445.346
+UTNet,C,43,csaw_test,positive_macro_dice,0.249,0.159
+UTNet,C,43,csaw_test,positive_macro_iou,0.161,0.117
+UTNet,C,43,csaw_test,pixel_recall,0.672,0.012
+UTNet,C,43,csaw_test,negative_fp_per_image,6346.298,5487.763
+UTNet,C,43,csaw_test,negative_fp_image_fraction,1.000,0.000
+UTNet,L,42,csaw_test,positive_macro_dice,0.293,0.141
+UTNet,L,42,csaw_test,positive_macro_iou,0.192,0.107
+UTNet,L,42,csaw_test,pixel_recall,0.742,0.042
+UTNet,L,42,csaw_test,negative_fp_per_image,4916.429,4803.367
+UTNet,L,42,csaw_test,negative_fp_image_fraction,1.000,0.000
+UTNet,H,42,csaw_test,positive_macro_dice,0.407,0.077
+UTNet,H,42,csaw_test,positive_macro_iou,0.280,0.064
+UTNet,H,42,csaw_test,pixel_recall,0.682,0.069
+UTNet,H,42,csaw_test,negative_fp_per_image,1122.524,872.108
+UTNet,H,42,csaw_test,negative_fp_image_fraction,1.000,0.000
+UTNet,LH,43,csaw_test,positive_macro_dice,0.420,0.102
+UTNet,LH,43,csaw_test,positive_macro_iou,0.290,0.082
+UTNet,LH,43,csaw_test,pixel_recall,0.672,0.043
+UTNet,LH,43,csaw_test,negative_fp_per_image,1760.393,2280.837
+UTNet,LH,43,csaw_test,negative_fp_image_fraction,1.000,0.000
+UTNet,LH,43,inbreast,point_exact_hit_rate,0.276,0.127
+UTNet,LH,43,inbreast,point_within1_hit_rate,0.312,0.143
+UTNet,LH,43,inbreast,partial_contour_macro_Dice,0.397,0.101
+UTNet,LH,43,inbreast,partial_contour_macro_IoU,0.291,0.098
+UTNet,LH,43,inbreast,mean_predicted_pixels,2043.351,410.454
+UTNet,LH,43,cbis_test,ROI_any_overlap_rate,0.585,0.137
+UTNet,LH,43,cbis_test,ROI_macro_coverage,0.009,0.006
+UTNet,LH,43,cbis_test,mean_predicted_pixels,9455.482,8493.552
+DeepMiCa,native,42,csaw_test,positive_macro_dice,0.522,0.019
+DeepMiCa,native,42,csaw_test,positive_macro_iou,0.378,0.018
+DeepMiCa,native,42,csaw_test,pixel_recall,0.600,0.043
+DeepMiCa,native,42,csaw_test,negative_fp_per_image,277.417,195.922
+DeepMiCa,native,42,csaw_test,negative_fp_image_fraction,0.881,0.055
+DeepMiCa,native,42,inbreast,point_exact_hit_rate,0.132,0.032
+DeepMiCa,native,42,inbreast,point_within1_hit_rate,0.156,0.037
+DeepMiCa,native,42,inbreast,partial_contour_macro_Dice,0.421,0.046
+DeepMiCa,native,42,inbreast,partial_contour_macro_IoU,0.322,0.043
+DeepMiCa,native,42,inbreast,mean_predicted_pixels,1339.161,530.538
+DeepMiCa,native,42,cbis_test,ROI_any_overlap_rate,0.459,0.057
+DeepMiCa,native,42,cbis_test,ROI_macro_coverage,0.007,0.004
+DeepMiCa,native,42,cbis_test,mean_predicted_pixels,3290.013,1990.708
+YOLO-HLSAM,native,42,csaw_test,positive_macro_dice,0.179,0.083
+YOLO-HLSAM,native,42,csaw_test,positive_macro_iou,0.114,0.058
+YOLO-HLSAM,native,42,csaw_test,pixel_recall,0.562,0.030
+YOLO-HLSAM,native,42,csaw_test,negative_fp_per_image,9133.679,8654.603
+YOLO-HLSAM,native,42,csaw_test,negative_fp_image_fraction,0.964,0.036
+YOLO-HLSAM,native,42,inbreast,point_exact_hit_rate,0.086,0.134
+YOLO-HLSAM,native,42,inbreast,point_within1_hit_rate,0.109,0.172
+YOLO-HLSAM,native,42,inbreast,partial_contour_macro_Dice,0.103,0.071
+YOLO-HLSAM,native,42,inbreast,partial_contour_macro_IoU,0.072,0.056
+YOLO-HLSAM,native,42,inbreast,mean_predicted_pixels,10221.152,15255.056
+YOLO-HLSAM,native,42,cbis_test,ROI_any_overlap_rate,0.204,0.110
+YOLO-HLSAM,native,42,cbis_test,ROI_macro_coverage,0.006,0.003
+YOLO-HLSAM,native,42,cbis_test,mean_predicted_pixels,31922.405,44544.958

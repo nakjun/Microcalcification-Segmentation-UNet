@@ -1,5 +1,7 @@
 # YOLO-HLSAM
 
+This directory provides the underlying model components. See the [manuscript reproduction guide](../paper_results/README.md) for the final YOLO-HLSAM adaptation.
+
 [논문](https://doi.org/10.1016/j.bspc.2025.108300)의 [공개 저장소](https://github.com/ccchg/yolo-hlsam)를 연결한 독립 학습·추론 구현입니다. 원본은 `../external/yolo-hlsam/yolo-hlsam/`, 고정 커밋은 `a29bb8e04796abb3af26d1cdc564183b68e13739`입니다.
 
 **공개 코드 기반 프로젝트용 구현이며 원 논문의 전체 학습 절차 재현은 아닙니다.** 원 저장소 README는 HLSAM이라고 부르지만 분할 학습 코드에는 `MaskDecoderHQ`가 제공됩니다. 이 클래스를 `decoder.py`로 추출하고 하드코딩된 checkpoint 로드만 명시적 state_dict 전달로 변경했습니다. 원 논문의 미공개 모듈을 추정해 추가하지 않았습니다. 원 코드의 저작권 문구를 보존했으며 원본 checkout에는 LICENSE 파일이 없습니다.

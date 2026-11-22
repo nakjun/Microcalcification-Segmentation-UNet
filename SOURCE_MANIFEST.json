@@ -1561,5 +1561,44 @@
       "sha256": "7147050af2b2ba0a659e7cb5f01e56b85b5a24c047e0c44274d416f96c009852",
       "reason": "study workflow"
     }
-  ]
+  ],
+  "manuscript_release": {
+    "title": "Comparative Evaluation of Deep Learning Models for Mammographic Calcification Segmentation",
+    "files": {
+      "DeepMiCa/README.md": "519f4ba3c45c6d9a37cc7e10a938bcc43c0c47abac9ebbd656c18c5720d05d69",
+      "README.md": "1a187a5f8e1337aa1feeddaac906768b8757b79b05ea82463bba9412c99f11b5",
+      "YOLO-HLSAM/README.md": "faaaa06c075cd7b893c5bf205b1e704428d47186565979c6dda6dc415d14cf0a",
+      "configs/csaw312_rerun_20261105/protocol.json": "615c8d5e77456aea95b6fe9af7256d55737fc93c96855b04aefb415c8a41c22d",
+      "paper_results/README.md": "11198f6779138338822373102462725223329780c2db5a5ef6bc78ebc582313d",
+      "paper_results/csaw_file_hashes.csv": "f74f5c69d4726ec2a78d923e2db8b97d5d111eb336ca5a6e9cd051993b337776",
+      "paper_results/csaw_inventory.csv": "f85082844f94ee63fd76ca628c9f53a5f66db485784b68328cdc24eb0b74da6f",
+      "paper_results/export_fold_metrics.py": "9b2aa94148272f649c40d22a04045d56a0ea2b69479ba0d9eb8a913eca345906",
+      "paper_results/fold_metrics.csv": "60ae661b77c110115b846e4ea8b4914aab6d450abe2acb4da535cdccd56e5d77",
+      "paper_results/sam_vit_b.sha256": "b97c1177cbad7e173d403b79f60943e450aef380d9afa8928258d19cbb64569c",
+      "paper_results/splits.json": "b8d57cd5ff553f3ecb461af3f8b22478ced7964beaccb2206088bb9bfd800509",
+      "paper_results/summarize.py": "e7184516751d865e04c97dcde1c1f6102bef5c8895b057e7980a3112c67330ae",
+      "paper_results/summary.csv": "21578ef5ea3f76db4ee1cdc64a9abff94ffccedf0e6f9172c0421ba7d4a773c0",
+      "scripts/csaw312_rerun/backbone.py": "cc42007d051401cfb67ca717c7d6ce5dae8acec434851767e1de1b84c761a3a1",
+      "scripts/csaw312_rerun/build_initial_candidates.py": "099c8f6aa6dff2e3481280551bf7a13d4268fd6fbc98422134825a9a680659b4",
+      "scripts/csaw312_rerun/common.py": "20ada0b96c7f02f4d821fb6cecfc92166b818e4d3a741a1233281afc623a354e",
+      "scripts/csaw312_rerun/configure_local.py": "15f8d9ada8ad61f357ee7e5664ef6ee1df7911f3bdbc8faf4361e54588969cdb",
+      "scripts/csaw312_rerun/export_external.py": "9fb24bfc0dc46bbff726ecff675b9ce38541b669dcd84406de5c23118b8192ff",
+      "scripts/csaw312_rerun/export_internal.py": "79b8af69c95483b0c7cc2cc26bccdfca5f39bdbddfa67a1ca6e237dcbd35a16e",
+      "scripts/csaw312_rerun/fp_external.py": "638a95634b6eb5f4ee534b035c19195260711dd00c0399bfdf81bddce77a26d3",
+      "scripts/csaw312_rerun/fp_utnet.py": "e3e3a2da1b94cf83d2798e8c05d10295b8ccdc37287119832a16cd6bfa634d26",
+      "scripts/csaw312_rerun/fp_yolo.py": "2c08604a9855fbbd87b85032e44b55eafd90e34cd31f1b7765110392d9c131f6",
+      "scripts/csaw312_rerun/gpu_gate.py": "a101234e7ad0b8a3a9ccee973c4a17b23d4fac92371ddcc7dfdcbd925d049c13",
+      "scripts/csaw312_rerun/metrics.py": "8285b7d0c70a3062fa6f254a731d15eaea08bb17e38353618f71107dba26b053",
+      "scripts/csaw312_rerun/predict_image.py": "5404ea008c9371e181b5af2367ee720871faecf2d973b5d6bc9487ced7238e63",
+      "scripts/csaw312_rerun/prepare_data.py": "20f721cdb3b7f33370617b5b5bb3971a92667c616a0763075ad61eea5767b701",
+      "scripts/csaw312_rerun/refit_records.py": "7f5ce49f67a7db003727c60484952cbe40d26118793b5b528d14d90a4151381a",
+      "scripts/csaw312_rerun/sampling.py": "2d1272e4e5634284cc1d6c638c9b645f1a1e02371583a6bd70a477e717ccf749",
+      "scripts/csaw312_rerun/specialized.py": "83f6b99a6f39f4677fbd1f5f1d52f19c1d56ebecb051300e1242853fa50e4a10",
+      "scripts/csaw312_rerun/test_metrics.py": "7b61727891974de4ae52a3d2c311a0b27ecf2d561d505aeac6de733cdd5df6c0",
+      "scripts/csaw312_rerun/test_prepare_data.py": "52ccb8043500876b894672b53d80e694c873e4c465ae67eda9030cdf874bbe2c",
+      "scripts/csaw312_rerun/train_paper.py": "adf34c7c102851a6315249e78b3969aef64cdb371ae9fac607fd9c77e5398ab8",
+      "scripts/csaw312_rerun/worker.py": "51060dcd3d775e89a01be48efbb38776c936a62ea19a6bd9253469b19dc7557e",
+      "workflows/README.md": "dc37a8d01de46541e118883271a922b1901b6ece2b2d60a7b9253e297cbf99a0"
+    }
+  }
 }

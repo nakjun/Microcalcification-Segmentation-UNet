@@ -1,5 +1,7 @@
 # DeepMiCa 분할 모델
 
+This directory provides the underlying model components. See the [manuscript reproduction guide](../paper_results/README.md) for the final DeepMiCa adaptation.
+
 공식 저장소 `external/DeepMiCa`의 `Step2_Segmentation/_03_Train/UNet.py`를 수정 없이 불러옵니다. 고정 커밋은 `c2ce72cdf3265897827b8ab38fc9e1c7965ff812`이며 파일 SHA-256을 확인합니다. 원 저작권·라이선스는 `../external/DeepMiCa/LICENSE`를 따릅니다.
 
 이 폴더는 **공개 분할망의 프로젝트용 학습·추론 구현**입니다. 논문의 전처리 및 분류를 포함한 전체 DeepMiCa 재현은 아닙니다. 사전학습 가중치는 제공하지 않습니다. 1채널은 공개 아키텍처를 유지하고, `--channels 2`는 첫 합성곱 입력을 바꾸는 명시적 변형입니다. 2채널은 기존 논문의 표현을 사용합니다: 첫 채널 `uint8/255 × 2 − 1`, 둘째 채널 `clip((uint8/255 − Gaussian19×19, σ=3) × 16, −1, 1)`, 경계는 `BORDER_REFLECT_101`입니다. 이 모드에서는 0–255 정수 영상과 `--scale 255`만 허용합니다. 학습 이미지는 네 변에 원본 영상의 문맥 9픽셀을 포함한 `(patch_size+18)²` 크기로 준비하고, 마스크는 중앙 `patch_size²` 영역에 대응시켜야 합니다. 실제 영상 경계의 문맥은 반사 경계로 추출하세요. 가우시안 처리 후 중앙 영역만 학습하므로 패치 경계의 인위적인 반사로 인한 학습·추론 차이를 방지합니다.
